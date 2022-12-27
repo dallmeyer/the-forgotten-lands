@@ -1,5 +1,6 @@
 data/assets/*
-data/decompiler_out/*
+data/decompiler_out/jak1/raw_obj/*
+data/decompiler_out/jak1/textures/*
 data/iso_data/*
 data/out/*
 data/log/*
@@ -17,3 +18,5 @@ data/extractor.log
 data/extractor.log
 .env
 Zedbottwitchintegration.exe
+data/custom_levels/crystal-cave/crystal-cave.glb
+data/custom_levels/crystal-cave/crystal-cave.jsonc

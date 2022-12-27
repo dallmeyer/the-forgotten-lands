@@ -187,7 +187,7 @@
       (new 'static 'continue-point
         :name "intro-start"
         :level 'village1
-        :flags (continue-flags intro)
+        ;; :flags (continue-flags intro)
         :trans (new 'static 'vector :x 164316.78 :y 15128.576 :z 3390588.0 :w 1.0)
         :quat (new 'static 'quaternion :y -0.2339 :w 0.9722)
         :camera-trans (new 'static 'vector :x 204089.34 :y 36257.793 :z 3358341.0 :w 1.0)
@@ -2012,4 +2012,102 @@
                            )
         )
 
+(define crystal-cave (new 'static 'level-load-info
+                           :index 27
+                           :name 'crystal-cave
+                           :visname 'crystal-cave-vis ;; name + -vis
+                           :nickname 'crc          ;; nickname
+                           :packages '(maincave)
+                           :sound-banks '(maincave)
+                           :music-bank 'maincave
+                           :ambient-sounds '()
+                           :mood '*crystal-cave-mood*
+                           :mood-func 'update-mood-default
+                           :ocean #f
+                           :sky #t
+                           :continues '(
+                                            (new 'static 'continue-point
+                                             :name "crystal-cave-start"
+                                             :level 'crystal-cave
+                                             :trans (new 'static 'vector :x (meters -51.23) :y (meters 93.12) :z (meters 15.18) :w 1.0)
+                                             :quat (new 'static 'quaternion  :x 0.0 :y -0.707 :z 0.0 :w 0.707)
+                                             :camera-trans (new 'static 'vector :x 0.0 :y 4096.0 :z 0.0 :w 1.0)
+                                             :camera-rot (new 'static 'array float 9 -0.0134 -0.0000 0.9999 -0.1257 0.9920 -0.0016 -0.9919 -0.1257 -0.0133)
+                                             :load-commands '()
+                                             :vis-nick 'none
+                                             :lev0 'crystal-cave
+                                             :disp0 'display
+                                             :lev1 'robocave
+                                             :disp1 #f
+                                             )
+                                             (new 'static 'continue-point
+                                             :name "crystal-cave-warp"
+                                             :level 'crystal-cave
+                                             ;; :flags (continue-flags warp)
+                                             :trans (new 'static 'vector :x (meters -1.00) :y (meters 99.08) :z (meters 7.55) :w 1.0)
+                                             :quat (new 'static 'quaternion  :w 1.0)
+                                             :camera-trans (new 'static 'vector :x 0.0 :y 4096.0 :z 0.0 :w 1.0)
+                                             :camera-rot (new 'static 'array float 9 0.9518 -0.0000 0.3065 -0.0444 0.9894 0.1379 -0.3032 -0.1449 0.9418)
+                                             :load-commands '()
+                                             :vis-nick 'none
+                                             :lev0 'crystal-cave
+                                             :disp0 'display
+                                             :lev1 'robocave
+                                             :disp1 #f
+                                             )
+                                             (new 'static 'continue-point
+                                             :name "crystal-cave-void-entry"
+                                             :level 'crystal-cave
+                                             :trans (new 'static 'vector :x (meters -186.34) :y (meters 88.49) :z (meters -9.55) :w 1.0)
+                                             :quat (new 'static 'quaternion :x 0.0 :y -0.612 :z 0.0 :w 0.791)
+                                             :camera-trans (new 'static 'vector :x (meters -179.77) :y (meters 92.48) :z (meters -11.25) :w 1.0)
+                                             :camera-rot (new 'static 'array float 9 0.3245 -0.0000 0.9458 -0.1371 0.9894 0.0470 -0.9358 -0.1449 0.3210)
+                                             :load-commands '()
+                                             :vis-nick 'none
+                                             :lev0 'crystal-cave
+                                             :disp0 'display
+                                             :lev1 'robocave
+                                             :disp1 #f
+                                             )
+                                             (new 'static 'continue-point
+                                             :name "crystal-cave-bad-shrooms"
+                                             :level 'crystal-cave
+                                             :trans (new 'static 'vector :x (meters -206.08) :y (meters 73.61) :z (meters -109.63) :w 1.0)
+                                             :quat (new 'static 'quaternion :x 0.0 :y -0.735 :z 0.0 :w 0.678)
+                                             :camera-trans (new 'static 'vector :x 0.0 :y 4096.0 :z 0.0 :w 1.0)
+                                             :camera-rot (new 'static 'array float 9 0.1605 -0.0000 0.9870 -0.1198 0.9925 0.0194 -0.9797 -0.1214 0.1593)
+                                             :load-commands '()
+                                             :vis-nick 'none
+                                             :lev0 'crystal-cave
+                                             :disp0 'display
+                                             :lev1 'robocave
+                                             :disp1 #f
+                                             )
+                                             (new 'static 'continue-point
+                                             :name "crystal-cave-void-end"
+                                             :level 'crystal-cave
+                                             :trans (new 'static 'vector :x (meters -327.51) :y (meters 96.61) :z (meters -43.80) :w 1.0)
+                                             :quat (new 'static 'quaternion :x 0.0 :y 0.411 :z 0.0 :w 0.912)
+                                             :camera-trans (new 'static 'vector :x 0.0 :y 4096.0 :z 0.0 :w 1.0)
+                                             :camera-rot (new 'static 'array float 9 0.4809 0.0000 -0.8767 0.1087 0.9922 0.0596 0.8699 -0.1240 0.4772)
+                                             :load-commands '()
+                                             :vis-nick 'none
+                                             :lev0 'crystal-cave
+                                             :disp0 'display
+                                             :lev1 'robocave
+                                             :disp1 #f
+                                             ))
+                           :tasks '()
+                           :priority 100
+                           :load-commands '()
+                           :alt-load-commands '()
+                           :bsp-mask #xffffffffffffffff
+                           :bsphere (new 'static 'sphere :w 167772160000.0)
+                           :bottom-height (meters 40)
+                           :run-packages '()
+                           :wait-for-load #t
+                           )
+        )
+
 (cons! *level-load-list* 'test-zone)
+(cons! *level-load-list* 'crystal-cave)

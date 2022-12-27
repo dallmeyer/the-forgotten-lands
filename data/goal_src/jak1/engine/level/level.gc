@@ -2014,7 +2014,7 @@
     ((not (or (-> obj level0 inside-boxes?) (-> obj level1 inside-boxes?)))
      (when (or (-> obj level0 vis-info 0) (-> obj level1 vis-info 0))
        (if (= *cheat-mode* 'debug)
-           (format *stdcon* "~3Loutside of bsp~%~0L")
+           (format *stdcon* "")
            )
        )
      )

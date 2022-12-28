@@ -11,6 +11,7 @@
   (new 'static 'level-load-info
     :index 1
     :name 'training
+    :customname "GEYSER ROCK"
     :visname 'training-vis
     :nickname 'tra
     :packages '(training)
@@ -114,6 +115,7 @@
   (new 'static 'level-load-info
     :index 2
     :name 'village1
+    :customname "GREEN SAGE'S HUT"
     :visname 'village1-vis
     :nickname 'vi1
     :packages '(village1)
@@ -187,7 +189,7 @@
       (new 'static 'continue-point
         :name "intro-start"
         :level 'village1
-        ;; :flags (continue-flags intro)
+        :flags (continue-flags intro)
         :trans (new 'static 'vector :x 164316.78 :y 15128.576 :z 3390588.0 :w 1.0)
         :quat (new 'static 'quaternion :y -0.2339 :w 0.9722)
         :camera-trans (new 'static 'vector :x 204089.34 :y 36257.793 :z 3358341.0 :w 1.0)
@@ -571,6 +573,7 @@
   (new 'static 'level-load-info
     :index 8
     :name 'village2
+    :customname "BLUE SAGE'S HUT"
     :visname 'village2-vis
     :nickname 'vi2
     :packages '(village2)
@@ -1062,6 +1065,7 @@
   (new 'static 'level-load-info
     :index 14
     :name 'village3
+    :customname "RED SAGE'S HUT"
     :visname 'village3-vis
     :nickname 'vi3
     :packages '(village3)
@@ -1540,6 +1544,7 @@
   (new 'static 'level-load-info
     :index 20
     :name 'citadel
+    :customname "GOL AND MAIA'S CITADEL"
     :visname 'citadel-vis
     :nickname 'cit
     :packages '(citadel)

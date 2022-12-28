@@ -12,4 +12,6 @@
   ("eichar-ice+0-ag.go" "eichar-ice+0")
   ("spiderwebs-ag.go" "spiderwebs")
   ("spiderwebs.o" "spiderwebs")
+  ("warp-gate-switch-ag.go" "warp-gate-switch")
+  ("warpgate-ag.go" "warpgate")
   )

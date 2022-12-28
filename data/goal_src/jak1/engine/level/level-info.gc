@@ -2015,6 +2015,7 @@
 (define crystal-cave (new 'static 'level-load-info
                            :index 27
                            :name 'crystal-cave
+                           :customname "???"
                            :visname 'crystal-cave-vis ;; name + -vis
                            :nickname 'crc          ;; nickname
                            :packages '(maincave)

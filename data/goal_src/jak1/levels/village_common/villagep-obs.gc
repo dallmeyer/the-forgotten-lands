@@ -473,6 +473,7 @@
   :code (the-as (function none :behavior warp-gate) anim-loop)
   )
 
+
 (defbehavior warp-gate-init-by-other warp-gate ((arg0 vector))
   (stack-size-set! (-> self main-thread) 512)
   (set! (-> self root) (new 'process 'trsqv))
@@ -480,22 +481,23 @@
   (logior! (-> self mask) (process-mask actor-pause))
   (set! (-> self level) (-> self entity extra level name))
   (set! (-> self min-slot) 0)
-  (let ((v1-11 (-> self level)))
+  (let ((v1-11 (-> self level)))   
+  ;; CHECK SELF LEVEL TO NOT DISPLAY IT IN THE MENU, ADD NEW LEVELS AND MAKE SURE OF THE ORDER :   
     (set! (-> self level-slot) (cond
                                  ((= v1-11 'training)
                                   0
                                   )
                                  ((= v1-11 'village1)
-                                  1
-                                  )
-                                 ((= v1-11 'village2)
                                   2
                                   )
-                                 ((= v1-11 'village3)
+                                 ((= v1-11 'village2)
                                   3
                                   )
-                                 ((or (= v1-11 'citadel) (= v1-11 'lavatube))
+                                 ((= v1-11 'village3)
                                   4
+                                  )
+                                 ((or (= v1-11 'citadel) (= v1-11 'lavatube))
+                                  5
                                   )
                                  (else
                                    -1
@@ -503,6 +505,7 @@
                                  )
           )
     )
+  ;; CHECK WHICH TASK HAS BEEN CLOSED TO UNLOCK X SLOTS IN THE PORTAL MENU
   (set! (-> self max-slot) (cond
                              ((task-closed? (game-task village4-button) (task-status need-hint))
                               5

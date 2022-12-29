@@ -2049,11 +2049,11 @@
                                              (new 'static 'continue-point
                                              :name "crystal-cave-warp"
                                              :level 'crystal-cave
-                                             ;; :flags (continue-flags warp)
+                                             :flags (continue-flags warp)
                                              :trans (new 'static 'vector :x (meters -1.00) :y (meters 99.08) :z (meters 7.55) :w 1.0)
                                              :quat (new 'static 'quaternion  :w 1.0)
                                              :camera-trans (new 'static 'vector :x 0.0 :y 4096.0 :z 0.0 :w 1.0)
-                                             :camera-rot (new 'static 'array float 9 0.9518 -0.0000 0.3065 -0.0444 0.9894 0.1379 -0.3032 -0.1449 0.9418)
+                                             :camera-rot (new 'static 'array float 9 -0.8387 -0.0000 -0.5445 0.0796 0.9892 -0.1227 0.5386 -0.1463 -0.8297)
                                              :load-commands '()
                                              :vis-nick 'none
                                              :lev0 'crystal-cave

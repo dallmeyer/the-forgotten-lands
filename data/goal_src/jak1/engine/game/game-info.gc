@@ -231,7 +231,7 @@
                             "village1-hut"
                             )
                           (else
-                            "title-start"
+                            "training-start" ;; TO CHANGE BACK AFTER PORTAL TESTING IS DONE
                             )
                           )
                     )

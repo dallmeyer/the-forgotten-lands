@@ -1139,6 +1139,17 @@
   :bwd (checkpt "crystal-cave-void-end" #f)
   )
 
+;; TEMPORARY WAY BACK TO GEYSER
+
+(static-load-boundary :flags (player )
+  ;;     y top                y bottom
+  :top (meters 122.01)  :bot (meters 92.43)
+  ;;          point 0 x        point 0 z      point 1 x        point 1 z
+  :points (  (meters -279.59) (meters 55.44)  (meters -330.66) (meters -54.50) )
+  :fwd (checkpt "training-start" #f)
+  :bwd (checkpt "training-start" #f)
+  )
+
 
 ))
 

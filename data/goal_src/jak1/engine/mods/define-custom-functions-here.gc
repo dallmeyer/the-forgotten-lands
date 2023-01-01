@@ -215,10 +215,12 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   `(format ,dst "~m ~m ~m~%" (-> ,vec x) (-> ,vec y) (-> ,vec z))
   )
 
-;; takes a path-control and a vector to offset every node in the path by
-(defmacro mod-offset-path (path voff)
-  `(dotimes (idx (-> ,path num-cverts))
-    (vector+! (-> ,path cverts idx) (-> ,path cverts idx) ,voff)
+;; takes a path-control and xyz values to offsets every node in the path by
+(defmacro shift-path! (path x y z)
+  `(let ((voff (static-vector-meters ,x ,y ,z)))
+    (dotimes (idx (-> ,path num-cverts))
+      (vector+! (-> ,path cverts idx) (-> ,path cverts idx) voff)
+      )
     )
   )
 
@@ -226,7 +228,6 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
 (defmacro path-print-meters (path)
   `(dotimes (idx (-> ,path num-cverts))
     (print-vector-meters (-> ,path cverts idx))
-    (none)
     )
   )
 

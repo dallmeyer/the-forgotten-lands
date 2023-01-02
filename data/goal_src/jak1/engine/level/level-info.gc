@@ -2028,7 +2028,7 @@
                            :music-bank 'maincave
                            :ambient-sounds '()
                            :mood '*crystal-cave-mood*
-                           :mood-func 'update-mood-default
+                           :mood-func 'update-mood-crystal-cave
                            :ocean #f
                            :sky #t
                            :continues '(

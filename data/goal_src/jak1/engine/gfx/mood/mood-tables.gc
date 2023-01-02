@@ -2856,38 +2856,6 @@
 ;; #############################################################################
 
 
-#|
-(define *custom-interp-table*
-  (new 'static 'sky-color-day
-    :hour (new 'static 'inline-array sky-color-hour 24
-      (new 'static 'sky-color-hour :snapshot1 6 :snapshot2 7 :morph-start 0.2 :morph-end 0.4)
-      (new 'static 'sky-color-hour :snapshot1 6 :snapshot2 7 :morph-start 0.4 :morph-end 0.6)
-      (new 'static 'sky-color-hour :snapshot1 6 :snapshot2 7 :morph-start 0.6 :morph-end 0.8)
-      (new 'static 'sky-color-hour :snapshot1 6 :snapshot2 7 :morph-start 0.8 :morph-end 0.99)
-      (new 'static 'sky-color-hour :snapshot2 7 :morph-start 0.99 :morph-end 0.8)
-      (new 'static 'sky-color-hour :snapshot2 7 :morph-start 0.8 :morph-end 0.6)
-      (new 'static 'sky-color-hour :snapshot2 7 :morph-start 0.6)
-      (new 'static 'sky-color-hour :snapshot2 1 :morph-end 0.5)
-      (new 'static 'sky-color-hour :snapshot2 1 :morph-start 0.5 :morph-end 0.99)
-      (new 'static 'sky-color-hour :snapshot1 2 :snapshot2 1 :morph-start 0.99 :morph-end 0.66)
-      (new 'static 'sky-color-hour :snapshot1 2 :snapshot2 1 :morph-start 0.66 :morph-end 0.33)
-      (new 'static 'sky-color-hour :snapshot1 2 :snapshot2 1 :morph-start 0.33)
-      (new 'static 'sky-color-hour :snapshot1 2 :snapshot2 3 :morph-end 0.33)
-      (new 'static 'sky-color-hour :snapshot1 2 :snapshot2 3 :morph-start 0.33 :morph-end 0.66)
-      (new 'static 'sky-color-hour :snapshot1 2 :snapshot2 3 :morph-start 0.66 :morph-end 0.99)
-      (new 'static 'sky-color-hour :snapshot1 4 :snapshot2 3 :morph-start 0.99 :morph-end 0.75)
-      (new 'static 'sky-color-hour :snapshot1 4 :snapshot2 3 :morph-start 0.75 :morph-end 0.5)
-      (new 'static 'sky-color-hour :snapshot1 4 :snapshot2 3 :morph-start 0.5)
-      (new 'static 'sky-color-hour :snapshot1 4 :snapshot2 5 :morph-end 0.99)
-      (new 'static 'sky-color-hour :snapshot1 6 :snapshot2 5 :morph-start 0.99 :morph-end 0.75)
-      (new 'static 'sky-color-hour :snapshot1 6 :snapshot2 5 :morph-start 0.75 :morph-end 0.5)
-      (new 'static 'sky-color-hour :snapshot1 6 :snapshot2 5 :morph-start 0.5 :morph-end 0.25)
-      (new 'static 'sky-color-hour :snapshot1 6 :snapshot2 5 :morph-start 0.25)
-      (new 'static 'sky-color-hour :snapshot1 6 :snapshot2 7 :morph-end 0.2)
-      )
-    )
-  )
-|#
 (defun make-crystal-cave-light-kit ((arg0 mood-context))
   (make-light-kit (-> arg0 light-group 1) 38229.332 0.9 0.9 0.4)
   (let ((s5-0 (-> arg0 light-group 2)))
@@ -2957,60 +2925,60 @@
 (define *crystal-cave-mood-lights-table*
   (new 'static 'mood-lights-table :data (new 'static 'inline-array mood-lights 8
                                           (new 'static 'mood-lights
-                                            :direction (new 'static 'vector :x -0.8 :y 0.9 :z -0.3) ;; Default :x -0.066987306 :y 0.25000003 :z 0.9659258
-                                            :lgt-color (new 'static 'vector :x 1.25 :y 1.0 :z 1.1 :w 1.0) ;; Default :x 1.558 :y 1.454 :z 0.228 :w 1.0
+                                            :direction (new 'static 'vector :x -0.8 :y 0.9 :z -0.3)
+                                            :lgt-color (new 'static 'vector :x 1.25 :y 1.0 :z 1.1 :w 1.0) 
                                             :prt-color (new 'static 'vector :w 1.0)
-                                            :amb-color (new 'static 'vector :x 0.15 :y 0.25 :z 0.15 :w 1.0)  ;; Default :x 0.4 :y 0.266 :z 0.6 :w 1.0
-                                            :shadow (new 'static 'vector :x 0.8 :y -0.9 :z -0.3) ;; Default :x -0.066987306 :y 0.25000003 :z 0.9659258
+                                            :amb-color (new 'static 'vector :x 0.15 :y 0.25 :z 0.15 :w 1.0) 
+                                            :shadow (new 'static 'vector :x 0.8 :y -0.9 :z -0.3)
                                             )
                                           (new 'static 'mood-lights
-                                            :direction (new 'static 'vector :x -0.8 :y 0.9 :z -0.3) ;; Default :x -0.066987306 :y 0.25000003 :z 0.9659258
-                                            :lgt-color (new 'static 'vector :x 1.25 :y 1.0 :z 1.1 :w 1.0) ;; Default :x 1.558 :y 1.454 :z 0.228 :w 1.0
+                                            :direction (new 'static 'vector :x -0.8 :y 0.9 :z -0.3) 
+                                            :lgt-color (new 'static 'vector :x 1.25 :y 1.0 :z 1.1 :w 1.0)
                                             :prt-color (new 'static 'vector :w 1.0)
-                                            :amb-color (new 'static 'vector :x 0.15 :y 0.25 :z 0.15 :w 1.0)  ;; Default :x 0.4 :y 0.266 :z 0.6 :w 1.0
-                                            :shadow (new 'static 'vector :x 0.8 :y -0.9 :z -0.3) ;; Default :x -0.066987306 :y 0.25000003 :z 0.9659258
+                                            :amb-color (new 'static 'vector :x 0.15 :y 0.25 :z 0.15 :w 1.0)
+                                            :shadow (new 'static 'vector :x 0.8 :y -0.9 :z -0.3)
                                             )
                                           (new 'static 'mood-lights
-                                            :direction (new 'static 'vector :x -0.8 :y 0.9 :z -0.3) ;; Default :x -0.066987306 :y 0.25000003 :z 0.9659258
-                                            :lgt-color (new 'static 'vector :x 1.25 :y 1.0 :z 1.1 :w 1.0) ;; Default :x 1.558 :y 1.454 :z 0.228 :w 1.0
+                                            :direction (new 'static 'vector :x -0.8 :y 0.9 :z -0.3)
+                                            :lgt-color (new 'static 'vector :x 1.25 :y 1.0 :z 1.1 :w 1.0)
                                             :prt-color (new 'static 'vector :w 1.0)
-                                            :amb-color (new 'static 'vector :x 0.15 :y 0.25 :z 0.15 :w 1.0)  ;; Default :x 0.4 :y 0.266 :z 0.6 :w 1.0
-                                            :shadow (new 'static 'vector :x 0.8 :y -0.9 :z -0.3) ;; Default :x -0.066987306 :y 0.25000003 :z 0.9659258
+                                            :amb-color (new 'static 'vector :x 0.15 :y 0.25 :z 0.15 :w 1.0)
+                                            :shadow (new 'static 'vector :x 0.8 :y -0.9 :z -0.3)
                                             )
                                           (new 'static 'mood-lights
-                                            :direction (new 'static 'vector :x -0.8 :y 0.9 :z -0.3) ;; Default :x -0.066987306 :y 0.25000003 :z 0.9659258
-                                            :lgt-color (new 'static 'vector :x 1.25 :y 1.0 :z 1.1 :w 1.0) ;; Default :x 1.558 :y 1.454 :z 0.228 :w 1.0
+                                            :direction (new 'static 'vector :x -0.8 :y 0.9 :z -0.3)
+                                            :lgt-color (new 'static 'vector :x 1.25 :y 1.0 :z 1.1 :w 1.0)
                                             :prt-color (new 'static 'vector :w 1.0)
-                                            :amb-color (new 'static 'vector :x 0.15 :y 0.25 :z 0.15 :w 1.0)  ;; Default :x 0.4 :y 0.266 :z 0.6 :w 1.0
-                                            :shadow (new 'static 'vector :x 0.8 :y -0.9 :z -0.3) ;; Default :x -0.066987306 :y 0.25000003 :z 0.9659258
+                                            :amb-color (new 'static 'vector :x 0.15 :y 0.25 :z 0.15 :w 1.0)
+                                            :shadow (new 'static 'vector :x 0.8 :y -0.9 :z -0.3)
                                             )
-                                          (new 'static 'mood-lights
-                                            :direction (new 'static 'vector :x -0.8 :y 0.9 :z -0.3) ;; Default :x -0.066987306 :y 0.25000003 :z 0.9659258
-                                            :lgt-color (new 'static 'vector :x 1.25 :y 1.0 :z 1.1 :w 1.0) ;; Default :x 1.558 :y 1.454 :z 0.228 :w 1.0
+                                          (new 'static 'mood-lights              ;; INDEX 5 : 
+                                            :direction (new 'static 'vector :x -0.8 :y 0.9 :z -0.3)
+                                            :lgt-color (new 'static 'vector :x 1.25 :y 1.0 :z 1.1 :w 1.0)
                                             :prt-color (new 'static 'vector :w 1.0)
-                                            :amb-color (new 'static 'vector :x 0.15 :y 0.25 :z 0.15 :w 1.0)  ;; Default :x 0.4 :y 0.266 :z 0.6 :w 1.0
-                                            :shadow (new 'static 'vector :x 0.8 :y -0.9 :z -0.3) ;; Default :x -0.066987306 :y 0.25000003 :z 0.9659258
+                                            :amb-color (new 'static 'vector :x 2.0 :y 2.0 :z 2.0 :w 1.0)
+                                            :shadow (new 'static 'vector :x 0.8 :y -0.9 :z -0.3)
                                             )
-                                          (new 'static 'mood-lights
-                                            :direction (new 'static 'vector :x -0.8 :y 0.9 :z -0.3) ;; Default :x -0.066987306 :y 0.25000003 :z 0.9659258
-                                            :lgt-color (new 'static 'vector :x 1.25 :y 1.0 :z 1.1 :w 1.0) ;; Default :x 1.558 :y 1.454 :z 0.228 :w 1.0
+                                          (new 'static 'mood-lights              ;; INDEX 6 : good mushrooms orange
+                                            :direction (new 'static 'vector :x -0.8 :y 0.9 :z -0.3)
+                                            :lgt-color (new 'static 'vector :x 0.1 :y 0.1 :z 0.1 :w 1.0)
                                             :prt-color (new 'static 'vector :w 1.0)
-                                            :amb-color (new 'static 'vector :x 0.15 :y 0.25 :z 0.15 :w 1.0)  ;; Default :x 0.4 :y 0.266 :z 0.6 :w 1.0
-                                            :shadow (new 'static 'vector :x 0.8 :y -0.9 :z -0.3) ;; Default :x -0.066987306 :y 0.25000003 :z 0.9659258
+                                            :amb-color (new 'static 'vector :x 0.15 :y 0.25 :z 0.15 :w 1.0)
+                                            :shadow (new 'static 'vector :x 0.8 :y -0.9 :z -0.3)
                                             )
-                                          (new 'static 'mood-lights
-                                            :direction (new 'static 'vector :x -0.8 :y 0.9 :z -0.3) ;; Default :x -0.066987306 :y 0.25000003 :z 0.9659258
-                                            :lgt-color (new 'static 'vector :x 1.25 :y 1.0 :z 1.1 :w 1.0) ;; Default :x 1.558 :y 1.454 :z 0.228 :w 1.0
+                                          (new 'static 'mood-lights              ;; INDEX 7 : bad mushrooms purple
+                                            :direction (new 'static 'vector :x -0.8 :y 0.9 :z -0.3)
+                                            :lgt-color (new 'static 'vector :x 2.0 :y 1.0 :z 1.0 :w 1.0)
                                             :prt-color (new 'static 'vector :w 1.0)
-                                            :amb-color (new 'static 'vector :x 0.15 :y 0.25 :z 0.15 :w 1.0)  ;; Default :x 0.4 :y 0.266 :z 0.6 :w 1.0
-                                            :shadow (new 'static 'vector :x 0.8 :y -0.9 :z -0.3) ;; Default :x -0.066987306 :y 0.25000003 :z 0.9659258
+                                            :amb-color (new 'static 'vector :x 0.5 :y 0.5 :z 0.5 :w 1.0)
+                                            :shadow (new 'static 'vector :x 0.8 :y -0.9 :z -0.3) 
                                             )
-                                          (new 'static 'mood-lights
-                                            :direction (new 'static 'vector :x -0.8 :y 0.9 :z -0.3) ;; Default :x -0.066987306 :y 0.25000003 :z 0.9659258
-                                            :lgt-color (new 'static 'vector :x 1.25 :y 1.0 :z 1.1 :w 1.0) ;; Default :x 1.558 :y 1.454 :z 0.228 :w 1.0
+                                          (new 'static 'mood-lights               ;; INDEX 0 : inside precursor ship purple/blue
+                                            :direction (new 'static 'vector :x -0.8 :y 0.9 :z -0.3)
+                                            :lgt-color (new 'static 'vector :x 0.1 :y 0.1 :z 0.1 :w 0.1)
                                             :prt-color (new 'static 'vector :w 1.0)
-                                            :amb-color (new 'static 'vector :x 0.15 :y 0.25 :z 0.15 :w 1.0)  ;; Default :x 0.4 :y 0.266 :z 0.6 :w 1.0
-                                            :shadow (new 'static 'vector :x 0.8 :y -0.9 :z -0.3) ;; Default :x -0.066987306 :y 0.25000003 :z 0.9659258
+                                            :amb-color (new 'static 'vector :x 0.1 :y 0.1 :z 0.1 :w 0.1)
+                                            :shadow (new 'static 'vector :x 0.8 :y -0.9 :z -0.3)
                                             )
                                           )
                                   )
@@ -3019,7 +2987,7 @@
 (define *crystal-cave-mood-sun-table*
   (new 'static 'mood-sun-table :data (new 'static 'inline-array mood-sun 8
                                        (new 'static 'mood-sun
-                                         :sun-color (new 'static 'vector :x 255.0 :y 128.0 :w 128.0)
+                                         :sun-color (new 'static 'vector :x 255.0 :y 128.0 :w 128.0)   ;; :x Red   :y Green   :w Blue
                                          :env-color (new 'static 'vector :x 255.0 :y 225.0 :z 96.0 :w 255.0)
                                          )
                                        (new 'static 'mood-sun
@@ -3047,8 +3015,8 @@
                                          :env-color (new 'static 'vector :x 255.0 :y 225.0 :z 96.0 :w 255.0)
                                          )
                                        (new 'static 'mood-sun
-                                         :sun-color (new 'static 'vector :x 255.0 :y 128.0 :w 128.0)
-                                         :env-color (new 'static 'vector :x 255.0 :y 225.0 :z 96.0 :w 255.0)
+                                         :sun-color (new 'static 'vector :x 1.0 :y 1.0 :w 1.0)
+                                         :env-color (new 'static 'vector :x 1.0 :y 1.0 :z 1.0 :w 1.0)
                                          )
                                        )
                                )

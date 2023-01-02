@@ -2778,3 +2778,15 @@
 
 
 
+;; CUSTOM LEVEL UPDATE-MOOD STUFF
+
+(defun update-mood-crystal-cave ((arg0 mood-context) (arg1 float) (arg2 int))
+  (when (not (paused?))
+    (clear-mood-times arg0)
+    (set! (-> arg0 times 0 w) 1.0)
+    (update-mood-quick arg0 0 0 0 arg2)
+    (update-mood-itimes arg0)
+    )
+  0
+  (none)
+  )

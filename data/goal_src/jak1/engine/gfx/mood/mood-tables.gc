@@ -2880,44 +2880,16 @@
   (new 'static 'mood-fog-table :data (new 'static 'inline-array mood-fog 8
                                        (new 'static 'mood-fog
                                          :fog-color (new 'static 'vector :x 160.0 :y 220.0 :z 180.0 :w 128.0)
-                                         :fog-dists (new 'static 'vector :x (meters 128.0) :y (meters 360.0) :z 255.0 :w 0.1) ;; Default :x 262144.0 :y 6717440.0 :z 255.0 :w 25.5
-                                         :erase-color (new 'static 'vector :w 128.0) ;; Default :w 128.0
+                                         :fog-dists (new 'static 'vector :x (meters 128.0) :y (meters 360.0) :z 255.0 :w 0.1)
+                                         :erase-color (new 'static 'vector :w 128.0)
                                          )
-                                       (new 'static 'mood-fog
-                                         :fog-color (new 'static 'vector :x 160.0 :y 220.0 :z 180.0 :w 128.0)
-                                         :fog-dists (new 'static 'vector :x (meters 128.0) :y (meters 360.0) :z 255.0 :w 0.1) ;; Default :x 262144.0 :y 6717440.0 :z 255.0 :w 25.5
-                                         :erase-color (new 'static 'vector :w 128.0) ;; Default :w 128.0
-                                         )
-                                       (new 'static 'mood-fog
-                                         :fog-color (new 'static 'vector :x 160.0 :y 220.0 :z 180.0 :w 128.0)
-                                         :fog-dists (new 'static 'vector :x (meters 128.0) :y (meters 360.0) :z 255.0 :w 0.1) ;; Default :x 262144.0 :y 6717440.0 :z 255.0 :w 25.5
-                                         :erase-color (new 'static 'vector :w 128.0) ;; Default :w 128.0
-                                         )
-                                       (new 'static 'mood-fog
-                                         :fog-color (new 'static 'vector :x 160.0 :y 220.0 :z 180.0 :w 128.0)
-                                         :fog-dists (new 'static 'vector :x (meters 128.0) :y (meters 360.0) :z 255.0 :w 0.1) ;; Default :x 262144.0 :y 6717440.0 :z 255.0 :w 25.5
-                                         :erase-color (new 'static 'vector :w 128.0) ;; Default :w 128.0
-                                         )
-                                       (new 'static 'mood-fog
-                                         :fog-color (new 'static 'vector :x 160.0 :y 220.0 :z 180.0 :w 128.0)
-                                         :fog-dists (new 'static 'vector :x (meters 128.0) :y (meters 360.0) :z 255.0 :w 0.1) ;; Default :x 262144.0 :y 6717440.0 :z 255.0 :w 25.5
-                                         :erase-color (new 'static 'vector :w 128.0) ;; Default :w 128.0
-                                         )
-                                       (new 'static 'mood-fog
-                                         :fog-color (new 'static 'vector :x 160.0 :y 220.0 :z 180.0 :w 128.0)
-                                         :fog-dists (new 'static 'vector :x (meters 128.0) :y (meters 360.0) :z 255.0 :w 0.1) ;; Default :x 262144.0 :y 6717440.0 :z 255.0 :w 25.5
-                                         :erase-color (new 'static 'vector :w 128.0) ;; Default :w 128.0
-                                         )
-                                       (new 'static 'mood-fog
-                                         :fog-color (new 'static 'vector :x 160.0 :y 220.0 :z 180.0 :w 128.0)
-                                         :fog-dists (new 'static 'vector :x (meters 128.0) :y (meters 360.0) :z 255.0 :w 0.1) ;; Default :x 262144.0 :y 6717440.0 :z 255.0 :w 25.5
-                                         :erase-color (new 'static 'vector :w 128.0) ;; Default :w 128.0
-                                         )
-                                       (new 'static 'mood-fog
-                                         :fog-color (new 'static 'vector :x 160.0 :y 220.0 :z 180.0 :w 128.0)
-                                         :fog-dists (new 'static 'vector :x (meters 128.0) :y (meters 360.0) :z 255.0 :w 0.1) ;; Default :x 262144.0 :y 6717440.0 :z 255.0 :w 25.5
-                                         :erase-color (new 'static 'vector :w 128.0) ;; Default :w 128.0
-                                         )
+                                       (new 'static 'mood-fog)
+                                       (new 'static 'mood-fog)
+                                       (new 'static 'mood-fog)
+                                       (new 'static 'mood-fog)
+                                       (new 'static 'mood-fog)
+                                       (new 'static 'mood-fog)
+                                       (new 'static 'mood-fog)
                                        )
                                )
   )
@@ -2931,55 +2903,13 @@
                                             :amb-color (new 'static 'vector :x 0.15 :y 0.25 :z 0.15 :w 1.0) 
                                             :shadow (new 'static 'vector :x 0.8 :y -0.9 :z -0.3)
                                             )
-                                          (new 'static 'mood-lights
-                                            :direction (new 'static 'vector :x -0.8 :y 0.9 :z -0.3) 
-                                            :lgt-color (new 'static 'vector :x 1.25 :y 1.0 :z 1.1 :w 1.0)
-                                            :prt-color (new 'static 'vector :w 1.0)
-                                            :amb-color (new 'static 'vector :x 0.15 :y 0.25 :z 0.15 :w 1.0)
-                                            :shadow (new 'static 'vector :x 0.8 :y -0.9 :z -0.3)
-                                            )
-                                          (new 'static 'mood-lights
-                                            :direction (new 'static 'vector :x -0.8 :y 0.9 :z -0.3)
-                                            :lgt-color (new 'static 'vector :x 1.25 :y 1.0 :z 1.1 :w 1.0)
-                                            :prt-color (new 'static 'vector :w 1.0)
-                                            :amb-color (new 'static 'vector :x 0.15 :y 0.25 :z 0.15 :w 1.0)
-                                            :shadow (new 'static 'vector :x 0.8 :y -0.9 :z -0.3)
-                                            )
-                                          (new 'static 'mood-lights
-                                            :direction (new 'static 'vector :x -0.8 :y 0.9 :z -0.3)
-                                            :lgt-color (new 'static 'vector :x 1.25 :y 1.0 :z 1.1 :w 1.0)
-                                            :prt-color (new 'static 'vector :w 1.0)
-                                            :amb-color (new 'static 'vector :x 0.15 :y 0.25 :z 0.15 :w 1.0)
-                                            :shadow (new 'static 'vector :x 0.8 :y -0.9 :z -0.3)
-                                            )
-                                          (new 'static 'mood-lights              ;; INDEX 5 : 
-                                            :direction (new 'static 'vector :x -0.8 :y 0.9 :z -0.3)
-                                            :lgt-color (new 'static 'vector :x 1.25 :y 1.0 :z 1.1 :w 1.0)
-                                            :prt-color (new 'static 'vector :w 1.0)
-                                            :amb-color (new 'static 'vector :x 2.0 :y 2.0 :z 2.0 :w 1.0)
-                                            :shadow (new 'static 'vector :x 0.8 :y -0.9 :z -0.3)
-                                            )
-                                          (new 'static 'mood-lights              ;; INDEX 6 : good mushrooms orange
-                                            :direction (new 'static 'vector :x -0.8 :y 0.9 :z -0.3)
-                                            :lgt-color (new 'static 'vector :x 0.1 :y 0.1 :z 0.1 :w 1.0)
-                                            :prt-color (new 'static 'vector :w 1.0)
-                                            :amb-color (new 'static 'vector :x 0.15 :y 0.25 :z 0.15 :w 1.0)
-                                            :shadow (new 'static 'vector :x 0.8 :y -0.9 :z -0.3)
-                                            )
-                                          (new 'static 'mood-lights              ;; INDEX 7 : bad mushrooms purple
-                                            :direction (new 'static 'vector :x -0.8 :y 0.9 :z -0.3)
-                                            :lgt-color (new 'static 'vector :x 2.0 :y 1.0 :z 1.0 :w 1.0)
-                                            :prt-color (new 'static 'vector :w 1.0)
-                                            :amb-color (new 'static 'vector :x 0.5 :y 0.5 :z 0.5 :w 1.0)
-                                            :shadow (new 'static 'vector :x 0.8 :y -0.9 :z -0.3) 
-                                            )
-                                          (new 'static 'mood-lights               ;; INDEX 0 : inside precursor ship purple/blue
-                                            :direction (new 'static 'vector :x -0.8 :y 0.9 :z -0.3)
-                                            :lgt-color (new 'static 'vector :x 0.1 :y 0.1 :z 0.1 :w 0.1)
-                                            :prt-color (new 'static 'vector :w 1.0)
-                                            :amb-color (new 'static 'vector :x 0.1 :y 0.1 :z 0.1 :w 0.1)
-                                            :shadow (new 'static 'vector :x 0.8 :y -0.9 :z -0.3)
-                                            )
+                                          (new 'static 'mood-lights)
+                                          (new 'static 'mood-lights)
+                                          (new 'static 'mood-lights)
+                                          (new 'static 'mood-lights)
+                                          (new 'static 'mood-lights)
+                                          (new 'static 'mood-lights)
+                                          (new 'static 'mood-lights)
                                           )
                                   )
   )
@@ -2990,34 +2920,13 @@
                                          :sun-color (new 'static 'vector :x 255.0 :y 128.0 :w 128.0)   ;; :x Red   :y Green   :w Blue
                                          :env-color (new 'static 'vector :x 255.0 :y 225.0 :z 96.0 :w 255.0)
                                          )
-                                       (new 'static 'mood-sun
-                                         :sun-color (new 'static 'vector :x 255.0 :y 128.0 :w 128.0)
-                                         :env-color (new 'static 'vector :x 255.0 :y 225.0 :z 96.0 :w 255.0)
-                                         )
-                                       (new 'static 'mood-sun
-                                         :sun-color (new 'static 'vector :x 255.0 :y 128.0 :w 128.0)
-                                         :env-color (new 'static 'vector :x 255.0 :y 225.0 :z 96.0 :w 255.0)
-                                         )
-                                       (new 'static 'mood-sun
-                                         :sun-color (new 'static 'vector :x 255.0 :y 128.0 :w 128.0)
-                                         :env-color (new 'static 'vector :x 255.0 :y 225.0 :z 96.0 :w 255.0)
-                                         )
-                                       (new 'static 'mood-sun
-                                         :sun-color (new 'static 'vector :x 255.0 :y 128.0 :w 128.0)
-                                         :env-color (new 'static 'vector :x 255.0 :y 225.0 :z 96.0 :w 255.0)
-                                         )
-                                       (new 'static 'mood-sun
-                                         :sun-color (new 'static 'vector :x 255.0 :y 128.0 :w 128.0)
-                                         :env-color (new 'static 'vector :x 255.0 :y 225.0 :z 96.0 :w 255.0)
-                                         )
-                                       (new 'static 'mood-sun
-                                         :sun-color (new 'static 'vector :x 255.0 :y 128.0 :w 128.0)
-                                         :env-color (new 'static 'vector :x 255.0 :y 225.0 :z 96.0 :w 255.0)
-                                         )
-                                       (new 'static 'mood-sun
-                                         :sun-color (new 'static 'vector :x 1.0 :y 1.0 :w 1.0)
-                                         :env-color (new 'static 'vector :x 1.0 :y 1.0 :z 1.0 :w 1.0)
-                                         )
+                                       (new 'static 'mood-sun)
+                                       (new 'static 'mood-sun)
+                                       (new 'static 'mood-sun)
+                                       (new 'static 'mood-sun)
+                                       (new 'static 'mood-sun)
+                                       (new 'static 'mood-sun)
+                                       (new 'static 'mood-sun)
                                        )
                                )
   )
@@ -3040,107 +2949,3 @@
 (set! (-> *crystal-cave-mood* num-stars) 85.0)
 
 (make-crystal-cave-light-kit *crystal-cave-mood*)
-
-;; #############################################################################
-;; crystalc-black ######################################################
-;; #############################################################################
-
-(defun make-crystalc-black-light-kit ((arg0 mood-context))
-  (make-light-kit (-> arg0 light-group 1) 38229.332 0.9 0.9 0.4)
-  (let ((s5-0 (-> arg0 light-group 2)))
-    (make-light-kit s5-0 2730.6667 1.0 1.0 0.8)
-    (let ((v1-0 (-> s5-0 dir2)))
-      (set! (-> v1-0 direction x) 0.0)
-      (set! (-> v1-0 direction y) -1.0)
-      (set! (-> v1-0 direction z) 0.0)
-      (set! (-> v1-0 direction w) 0.0)
-      )
-    (set-vector! (-> s5-0 dir2 color) 0.75 0.375 0.0 1.0)
-    )
-  (make-light-kit (-> arg0 light-group 3) 53703.11 0.9 0.9 0.5)
-  (make-light-kit (-> arg0 light-group 4) 54613.332 0.9 0.9 0.4)
-  (make-light-kit (-> arg0 light-group 5) 54613.332 0.9 0.9 0.4)
-  (make-light-kit (-> arg0 light-group 6) 5461.3335 0.9 0.0 0.4)
-  (make-light-kit (-> arg0 light-group 7) 41870.223 0.9 0.9 0.4)
-  (none)
-  )
-
-(define *crystalc-black-mood-lights-table*
-  (new 'static 'mood-lights-table :data (new 'static 'inline-array mood-lights 8
-                                          (new 'static 'mood-lights
-                                            :direction (new 'static 'vector :x -0.8 :y 0.9 :z -0.3) ;; Default :x -0.066987306 :y 0.25000003 :z 0.9659258
-                                            :lgt-color (new 'static 'vector :x 0.0 :y 0.0 :z 0.0 :w 0.0) ;; Default :x 1.558 :y 1.454 :z 0.228 :w 1.0
-                                            :prt-color (new 'static 'vector :w 1.0)
-                                            :amb-color (new 'static 'vector :x 0.15 :y 0.25 :z 0.15 :w 1.0)  ;; Default :x 0.4 :y 0.266 :z 0.6 :w 1.0
-                                            :shadow (new 'static 'vector :x 0.8 :y -0.9 :z -0.3) ;; Default :x -0.066987306 :y 0.25000003 :z 0.9659258
-                                            )
-                                          (new 'static 'mood-lights
-                                            :direction (new 'static 'vector :x -0.8 :y 0.9 :z -0.3) ;; Default :x -0.066987306 :y 0.25000003 :z 0.9659258
-                                            :lgt-color (new 'static 'vector :x 0.0 :y 0.0 :z 0.0 :w 0.0) ;; Default :x 1.558 :y 1.454 :z 0.228 :w 1.0
-                                            :prt-color (new 'static 'vector :w 1.0)
-                                            :amb-color (new 'static 'vector :x 0.15 :y 0.25 :z 0.15 :w 1.0)  ;; Default :x 0.4 :y 0.266 :z 0.6 :w 1.0
-                                            :shadow (new 'static 'vector :x 0.8 :y -0.9 :z -0.3) ;; Default :x -0.066987306 :y 0.25000003 :z 0.9659258
-                                            )
-                                          (new 'static 'mood-lights
-                                            :direction (new 'static 'vector :x -0.8 :y 0.9 :z -0.3) ;; Default :x -0.066987306 :y 0.25000003 :z 0.9659258
-                                            :lgt-color (new 'static 'vector :x 0.0 :y 0.0 :z 0.0 :w 0.0) ;; Default :x 1.558 :y 1.454 :z 0.228 :w 1.0
-                                            :prt-color (new 'static 'vector :w 1.0)
-                                            :amb-color (new 'static 'vector :x 0.15 :y 0.25 :z 0.15 :w 1.0)  ;; Default :x 0.4 :y 0.266 :z 0.6 :w 1.0
-                                            :shadow (new 'static 'vector :x 0.8 :y -0.9 :z -0.3) ;; Default :x -0.066987306 :y 0.25000003 :z 0.9659258
-                                            )
-                                          (new 'static 'mood-lights
-                                            :direction (new 'static 'vector :x -0.8 :y 0.9 :z -0.3) ;; Default :x -0.066987306 :y 0.25000003 :z 0.9659258
-                                            :lgt-color (new 'static 'vector :x 0.0 :y 0.0 :z 0.0 :w 0.0) ;; Default :x 1.558 :y 1.454 :z 0.228 :w 1.0
-                                            :prt-color (new 'static 'vector :w 1.0)
-                                            :amb-color (new 'static 'vector :x 0.15 :y 0.25 :z 0.15 :w 1.0)  ;; Default :x 0.4 :y 0.266 :z 0.6 :w 1.0
-                                            :shadow (new 'static 'vector :x 0.8 :y -0.9 :z -0.3) ;; Default :x -0.066987306 :y 0.25000003 :z 0.9659258
-                                            )
-                                          (new 'static 'mood-lights
-                                            :direction (new 'static 'vector :x -0.8 :y 0.9 :z -0.3) ;; Default :x -0.066987306 :y 0.25000003 :z 0.9659258
-                                            :lgt-color (new 'static 'vector :x 0.0 :y 0.0 :z 0.0 :w 0.0) ;; Default :x 1.558 :y 1.454 :z 0.228 :w 1.0
-                                            :prt-color (new 'static 'vector :w 1.0)
-                                            :amb-color (new 'static 'vector :x 0.15 :y 0.25 :z 0.15 :w 1.0)  ;; Default :x 0.4 :y 0.266 :z 0.6 :w 1.0
-                                            :shadow (new 'static 'vector :x 0.8 :y -0.9 :z -0.3) ;; Default :x -0.066987306 :y 0.25000003 :z 0.9659258
-                                            )
-                                          (new 'static 'mood-lights
-                                            :direction (new 'static 'vector :x -0.8 :y 0.9 :z -0.3) ;; Default :x -0.066987306 :y 0.25000003 :z 0.9659258
-                                            :lgt-color (new 'static 'vector :x 0.0 :y 0.0 :z 0.0 :w 0.0) ;; Default :x 1.558 :y 1.454 :z 0.228 :w 1.0
-                                            :prt-color (new 'static 'vector :w 1.0)
-                                            :amb-color (new 'static 'vector :x 0.15 :y 0.25 :z 0.15 :w 1.0)  ;; Default :x 0.4 :y 0.266 :z 0.6 :w 1.0
-                                            :shadow (new 'static 'vector :x 0.8 :y -0.9 :z -0.3) ;; Default :x -0.066987306 :y 0.25000003 :z 0.9659258
-                                            )
-                                          (new 'static 'mood-lights
-                                            :direction (new 'static 'vector :x -0.8 :y 0.9 :z -0.3) ;; Default :x -0.066987306 :y 0.25000003 :z 0.9659258
-                                            :lgt-color (new 'static 'vector :x 0.0 :y 0.0 :z 0.0 :w 0.0) ;; Default :x 1.558 :y 1.454 :z 0.228 :w 1.0
-                                            :prt-color (new 'static 'vector :w 1.0)
-                                            :amb-color (new 'static 'vector :x 0.15 :y 0.25 :z 0.15 :w 1.0)  ;; Default :x 0.4 :y 0.266 :z 0.6 :w 1.0
-                                            :shadow (new 'static 'vector :x 0.8 :y -0.9 :z -0.3) ;; Default :x -0.066987306 :y 0.25000003 :z 0.9659258
-                                            )
-                                          (new 'static 'mood-lights
-                                            :direction (new 'static 'vector :x -0.8 :y 0.9 :z -0.3) ;; Default :x -0.066987306 :y 0.25000003 :z 0.9659258
-                                            :lgt-color (new 'static 'vector :x 0.0 :y 0.0 :z 0.0 :w 0.0) ;; Default :x 1.558 :y 1.454 :z 0.228 :w 1.0
-                                            :prt-color (new 'static 'vector :w 1.0)
-                                            :amb-color (new 'static 'vector :x 0.15 :y 0.25 :z 0.15 :w 1.0)  ;; Default :x 0.4 :y 0.266 :z 0.6 :w 1.0
-                                            :shadow (new 'static 'vector :x 0.8 :y -0.9 :z -0.3) ;; Default :x -0.066987306 :y 0.25000003 :z 0.9659258
-                                            )
-                                          )
-                                  )
-  )
-
-(define *crystalc-black-mood* (new 'global 'mood-context))
-
-(set! (-> *crystalc-black-mood* mood-fog-table) *crystal-cave-mood-fog-table*)
-
-(set! (-> *crystalc-black-mood* mood-lights-table) *crystalc-black-mood-lights-table*)
-
-(set! (-> *crystalc-black-mood* mood-sun-table) *crystal-cave-mood-sun-table*)
-
-(set! (-> *crystalc-black-mood* fog-interp) *default-interp-table*)
-
-(set! (-> *crystalc-black-mood* palette-interp) *village1-palette-interp-table*)
-
-(set! (-> *crystalc-black-mood* sky-texture-interp) *default-interp-table*)
-
-(set! (-> *crystalc-black-mood* num-stars) 85.0)
-
-(make-crystalc-black-light-kit *crystalc-black-mood*)

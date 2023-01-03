@@ -11,3 +11,5 @@ jobs:
         with:
           message: |
             **Hey! You created this PR against mod-base, did you mean to create it against one of the forks?**
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+

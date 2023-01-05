@@ -2303,9 +2303,136 @@
         "cycle-speed": ["float", -1.0, 0.0]
       }
     },
+    {
+      "trans": [-17.35, 95.03, 20.48], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-17.35, 95.03, 20.48, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-drip-01",
+        "effect-name":"waterfall",
+        "art-name":"group-cave-cavedrip-1",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-1.65, 104.83, -2.96], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-1.65, 104.83, -2.96, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-drip-02",
+        "effect-name":"waterfall",
+        "art-name":"group-cave-cavedrip-2",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-12.55, 98.61, 17.77], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-12.55, 98.61, 17.77, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-drip-03",
+        "effect-name":"waterfall",
+        "art-name":"group-cave-cavedrip-3",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-42.44, 89.66, 15.33], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-42.44, 89.66, 15.33, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-drip-04",
+        "effect-name":"waterfall",
+        "art-name":"group-cave-cavedrip-1",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-314.85, 100.71, 35.26], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-314.85, 100.71, 35.26, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-drip-05",
+        "effect-name":"waterfall",
+        "art-name":"group-cave-cavedrip-2",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-266.55, 106.87, -27.37], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-266.55, 106.87, -27.37, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-drip-06",
+        "effect-name":"waterfall",
+        "art-name":"group-cave-cavedrip-3",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-297.08, 102.8, -39.99], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-297.08, 102.8, -39.99, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-drip-07",
+        "effect-name":"waterfall",
+        "art-name":"group-cave-cavedrip-1",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-283.12, 110.14, -35.16], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-283.12, 110.14, -35.16, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-drip-08",
+        "effect-name":"waterfall",
+        "art-name":"group-cave-cavedrip-1",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-285.9, 107.9, -41.42], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-285.9, 107.9, -41.42, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-drip-09",
+        "effect-name":"waterfall",
+        "art-name":"group-cave-cavedrip-2",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+
 
     // Finish the waterfalls
-    // other particles : driples from maincave / fireflies from citadel's sage cages or the muse / god rays from jungle-dapple-light
+    // other particles : fireflies from citadel's sage cages or the muse
 
     // ###########################################################################
     // ###########################################################################
@@ -2413,17 +2540,7 @@
       "lump": {
         "name":"crystalc-warpmiddle-01"
       }
-    }/*,        
-    {
-      "trans": [0.52, 99.83, -1.37], // translation
-      "etype": "warp-gate-switch",  // actor type                     // WARP GATE SWITCH CRASH THE GAME IDK //
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [0.52, 99.83, -1.37, 10], // bounding sphere
-      "lump": {
-        "name":"crystalc-warpgateswitch-01"
-      }
-    }*//*,
+    }/*,
     {
       "trans": [-10.0, 100.0, 20.0], // translation  
       "etype": "spiderwebs",  // actor type                               // TEST ACTOR //

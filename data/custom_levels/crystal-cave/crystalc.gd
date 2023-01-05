@@ -1,6 +1,8 @@
 ;; DGO definition file for crystal-cave
 ;; We use the convention of having a longer DGO name for levels without precomputed visibility.
 
+;; name: crystalc.gd
+
 ;; the actual file name still needs to be 8.3
 ("CRC.DGO"
   ("static-screen.o" "static-screen")
@@ -12,9 +14,7 @@
   ("eichar-ice+0-ag.go" "eichar-ice+0")
   ("spiderwebs-ag.go" "spiderwebs")
   ("spiderwebs.o" "spiderwebs")
-  ;;("warp-gate-switch-ag.go" "warp-gate-switch")
-  ;;("warpgate-ag.go" "warpgate")
   ("villagep-obs.o" "villagep-obs")
-  ;;("training-obs.o" "training-obs")
-  ;;("training-part.o" "training-part")
+  ("training-obs.o" "training-obs")
+  ("training-part.o" "training-part")
   )

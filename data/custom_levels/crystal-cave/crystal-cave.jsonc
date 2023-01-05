@@ -2219,6 +2219,90 @@
         "cycle-speed": ["float", -1.0, 0.0]
       }
     },
+    {
+      "trans": [-219.58, 176.2, -48.36], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-219.58, 176.2, -48.36, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-godrays-01",
+        "effect-name":"waterfall",
+        "art-name":"group-crystalc-godrays-01",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-140.56, 86.62, -65.89], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-140.56, 86.62, -65.89, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-waterfall-02",
+        "effect-name":"waterfall",
+        "art-name":"group-crystalc-waterfall-02",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-128.02, 85.79, -69.29], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-128.02, 85.79, -69.29, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-waterfall-03",
+        "effect-name":"waterfall",
+        "art-name":"group-crystalc-waterfall-03",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-108.65, 85.80, -71.38], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-108.65, 85.80, -71.38, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-waterfall-03b",
+        "effect-name":"waterfall",
+        "art-name":"group-crystalc-waterfall-03",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-99.52, 86.97, -88.09], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-99.52, 86.97, -88.09, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-waterfall-04",
+        "effect-name":"waterfall",
+        "art-name":"group-crystalc-waterfall-04",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-171.33, 88.09, -72.78], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-171.33, 88.09, -72.78, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-waterfall-05",
+        "effect-name":"waterfall",
+        "art-name":"group-crystalc-waterfall-05",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
 
     // Finish the waterfalls
     // other particles : driples from maincave / fireflies from citadel's sage cages or the muse / god rays from jungle-dapple-light

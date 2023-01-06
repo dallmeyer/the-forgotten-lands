@@ -1869,19 +1869,571 @@
     // ###########################################################################
     // ###########################################################################
     // ###########################################################################
-    /*{
-      "trans": [ -6.99, 107.25, 17.03], // translation
+    {
+      "trans": [-200.91, 95.70, -59.30], // translation
       "etype": "training-part",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-6.99, 107.25, 17.03, 10], // bounding sphere
+      "quat" : [0, -0.425, 0, 0.905], // quaternion
+      "bsphere": [-200.91, 95.70, -59.30, 10], // bounding sphere
       "lump": {
         "name":"crystalc-waterfall-01",
         "effect-name":"waterfall",
-        "effect-param": [10, 20, 10, 10],
-        "cycle-speed": [-1, 0]
+        "art-name":"group-crystalc-waterfall-01",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
       }
-    }, */
+    },
+    {
+      "trans": [-250.19, 45.21, -111.03], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, -0.425, 0, 0.905], // quaternion
+      "bsphere": [-250.19, 45.21, -111.03, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-bad-ground-01",
+        "effect-name":"waterfall",
+        "art-name":"group-crystalc-bad-ground-01",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-97.14, 91.04, -37.73], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, -0.425, 0, 0.905], // quaternion
+      "bsphere": [-97.14, 91.04, -37.73, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-bad-shroom-big-01",
+        "effect-name":"waterfall",
+        "art-name":"group-crystalc-bad-shroom-big",
+        "effect-param": ["float", 10.0, 50.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-88.77, 94.42, 16.25], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, -0.425, 0, 0.905], // quaternion
+      "bsphere": [-88.77, 94.42, 16.25, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-bad-shroom-big-02",
+        "effect-name":"waterfall",
+        "art-name":"group-crystalc-bad-shroom-big",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-93.13, 95.94, 18.38], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, -0.425, 0, 0.905], // quaternion
+      "bsphere": [-93.13, 95.94, 18.38, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-bad-shroom-big-03",
+        "effect-name":"waterfall",
+        "art-name":"group-crystalc-bad-shroom-big",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-199.83, 129.29, 26.17], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, -0.425, 0, 0.905], // quaternion
+      "bsphere": [-199.83, 129.29, 26.17, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-bad-shroom-big-04",
+        "effect-name":"waterfall",
+        "art-name":"group-crystalc-bad-shroom-big",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-241.66, 95.93, -37.21], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, -0.425, 0, 0.905], // quaternion
+      "bsphere": [-241.66, 95.93, -37.21, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-bad-shroom-big-05",
+        "effect-name":"waterfall",
+        "art-name":"group-crystalc-bad-shroom-big",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-183.28, 83.77, -126.84], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, -0.425, 0, 0.905], // quaternion
+      "bsphere": [-183.28, 83.77, -126.84, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-bad-shroom-big-06",
+        "effect-name":"waterfall",
+        "art-name":"group-crystalc-bad-shroom-big",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-242.79, 86.73, -151.68], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, -0.425, 0, 0.905], // quaternion
+      "bsphere": [-242.79, 86.73, -151.68, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-bad-shroom-big-07",
+        "effect-name":"waterfall",
+        "art-name":"group-crystalc-bad-shroom-big",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-244.13, 84.53, -146.14], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, -0.425, 0, 0.905], // quaternion
+      "bsphere": [-244.13, 84.53, -146.14, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-bad-shroom-big-08",
+        "effect-name":"waterfall",
+        "art-name":"group-crystalc-bad-shroom-big",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-248.44, 85.56, -153.04], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, -0.425, 0, 0.905], // quaternion
+      "bsphere": [-248.44, 85.56, -153.04, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-bad-shroom-big-09",
+        "effect-name":"waterfall",
+        "art-name":"group-crystalc-bad-shroom-big",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-269.70, 91.05, -155.37], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, -0.425, 0, 0.905], // quaternion
+      "bsphere": [-269.70, 91.05, -155.37, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-bad-shroom-big-10",
+        "effect-name":"waterfall",
+        "art-name":"group-crystalc-bad-shroom-big",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-254.36, 134.4, 13.19], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, -0.425, 0, 0.905], // quaternion
+      "bsphere": [-254.36, 134.4, 13.19, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-bad-shroom-big-11",
+        "effect-name":"waterfall",
+        "art-name":"group-crystalc-bad-shroom-big",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-97.77, 88.92, -34.24], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, -0.425, 0, 0.905], // quaternion
+      "bsphere": [-97.77, 88.92, -34.24, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-bad-shroom-small-01",
+        "effect-name":"waterfall",
+        "art-name":"group-crystalc-bad-shroom-small",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-99.62, 89.17, -37.62], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, -0.425, 0, 0.905], // quaternion
+      "bsphere": [-99.62, 89.17, -37.62, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-bad-shroom-small-02",
+        "effect-name":"waterfall",
+        "art-name":"group-crystalc-bad-shroom-small",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-196.35, 127.62, 24.63], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, -0.425, 0, 0.905], // quaternion
+      "bsphere": [-196.35, 127.62, 24.63, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-bad-shroom-small-03",
+        "effect-name":"waterfall",
+        "art-name":"group-crystalc-bad-shroom-small",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-195.97, 129.67, 27.25], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, -0.425, 0, 0.905], // quaternion
+      "bsphere": [-195.97, 129.67, 27.25, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-bad-shroom-small-04",
+        "effect-name":"waterfall",
+        "art-name":"group-crystalc-bad-shroom-small",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-204.39, 125.84, 26.93], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, -0.425, 0, 0.905], // quaternion
+      "bsphere": [-204.39, 125.84, 26.93, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-bad-shroom-small-05",
+        "effect-name":"waterfall",
+        "art-name":"group-crystalc-bad-shroom-small",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-236.62, 93.78, -36.62], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, -0.425, 0, 0.905], // quaternion
+      "bsphere": [-236.62, 93.78, -36.62, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-bad-shroom-small-06",
+        "effect-name":"waterfall",
+        "art-name":"group-crystalc-bad-shroom-small",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-246.75, 97.24, -36.40], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, -0.425, 0, 0.905], // quaternion
+      "bsphere": [-246.75, 97.24, -36.40, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-bad-shroom-small-07",
+        "effect-name":"waterfall",
+        "art-name":"group-crystalc-bad-shroom-small",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-186.09, 79.59, -127.80], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, -0.425, 0, 0.905], // quaternion
+      "bsphere": [-186.09, 79.59, -127.80, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-bad-shroom-small-08",
+        "effect-name":"waterfall",
+        "art-name":"group-crystalc-bad-shroom-small",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-245.71, 101.36, -66.66], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, -0.425, 0, 0.905], // quaternion
+      "bsphere": [-245.71, 101.36, -66.66, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-bad-shroom-small-09",
+        "effect-name":"waterfall",
+        "art-name":"group-crystalc-bad-shroom-small",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-250.74, 99.03, -68.83], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, -0.425, 0, 0.905], // quaternion
+      "bsphere": [-250.74, 99.03, -68.83, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-bad-shroom-small-10",
+        "effect-name":"waterfall",
+        "art-name":"group-crystalc-bad-shroom-small",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-255.41, 98.66, -69.75], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, -0.425, 0, 0.905], // quaternion
+      "bsphere": [-255.41, 98.66, -69.75, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-bad-shroom-small-11",
+        "effect-name":"waterfall",
+        "art-name":"group-crystalc-bad-shroom-small",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-255.82, 132.69, 17.43], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, -0.425, 0, 0.905], // quaternion
+      "bsphere": [-255.82, 132.69, 17.43, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-bad-shroom-small-12",
+        "effect-name":"waterfall",
+        "art-name":"group-crystalc-bad-shroom-small",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-219.58, 176.2, -48.36], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-219.58, 176.2, -48.36, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-godrays-01",
+        "effect-name":"waterfall",
+        "art-name":"group-crystalc-godrays-01",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-140.56, 86.62, -65.89], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-140.56, 86.62, -65.89, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-waterfall-02",
+        "effect-name":"waterfall",
+        "art-name":"group-crystalc-waterfall-02",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-128.02, 85.79, -69.29], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-128.02, 85.79, -69.29, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-waterfall-03",
+        "effect-name":"waterfall",
+        "art-name":"group-crystalc-waterfall-03",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-108.65, 85.80, -71.38], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-108.65, 85.80, -71.38, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-waterfall-03b",
+        "effect-name":"waterfall",
+        "art-name":"group-crystalc-waterfall-03",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-99.52, 86.97, -88.09], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-99.52, 86.97, -88.09, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-waterfall-04",
+        "effect-name":"waterfall",
+        "art-name":"group-crystalc-waterfall-04",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-171.33, 88.09, -72.78], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-171.33, 88.09, -72.78, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-waterfall-05",
+        "effect-name":"waterfall",
+        "art-name":"group-crystalc-waterfall-05",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-17.35, 95.03, 20.48], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-17.35, 95.03, 20.48, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-drip-01",
+        "effect-name":"waterfall",
+        "art-name":"group-cave-cavedrip-1",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-1.65, 104.83, -2.96], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-1.65, 104.83, -2.96, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-drip-02",
+        "effect-name":"waterfall",
+        "art-name":"group-cave-cavedrip-2",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-12.55, 98.61, 17.77], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-12.55, 98.61, 17.77, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-drip-03",
+        "effect-name":"waterfall",
+        "art-name":"group-cave-cavedrip-3",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-42.44, 89.66, 15.33], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-42.44, 89.66, 15.33, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-drip-04",
+        "effect-name":"waterfall",
+        "art-name":"group-cave-cavedrip-1",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-314.85, 100.71, 35.26], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-314.85, 100.71, 35.26, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-drip-05",
+        "effect-name":"waterfall",
+        "art-name":"group-cave-cavedrip-2",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-266.55, 106.87, -27.37], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-266.55, 106.87, -27.37, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-drip-06",
+        "effect-name":"waterfall",
+        "art-name":"group-cave-cavedrip-3",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-297.08, 102.8, -39.99], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-297.08, 102.8, -39.99, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-drip-07",
+        "effect-name":"waterfall",
+        "art-name":"group-cave-cavedrip-1",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-283.12, 110.14, -35.16], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-283.12, 110.14, -35.16, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-drip-08",
+        "effect-name":"waterfall",
+        "art-name":"group-cave-cavedrip-1",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [-285.9, 107.9, -41.42], // translation
+      "etype": "training-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-285.9, 107.9, -41.42, 10], // bounding sphere
+      "lump": {
+        "name":"crystalc-drip-09",
+        "effect-name":"waterfall",
+        "art-name":"group-cave-cavedrip-2",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+
+
+    // Finish the waterfalls
+    // other particles : fireflies from citadel's sage cages or the muse
+
     // ###########################################################################
     // ###########################################################################
     // ###########################################################################
@@ -1988,17 +2540,7 @@
       "lump": {
         "name":"crystalc-warpmiddle-01"
       }
-    }/*,        
-    {
-      "trans": [0.52, 99.83, -1.37], // translation
-      "etype": "warp-gate-switch",  // actor type                     // WARP GATE SWITCH CRASH THE GAME IDK //
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [0.52, 99.83, -1.37, 10], // bounding sphere
-      "lump": {
-        "name":"crystalc-warpgateswitch-01"
-      }
-    }*//*,
+    }/*,
     {
       "trans": [-10.0, 100.0, 20.0], // translation  
       "etype": "spiderwebs",  // actor type                               // TEST ACTOR //

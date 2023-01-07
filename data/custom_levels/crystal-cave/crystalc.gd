@@ -17,4 +17,7 @@
   ("villagep-obs.o" "villagep-obs")
   ("training-obs.o" "training-obs")
   ("training-part.o" "training-part")
+  ;;("breakaway-left-ag.go" "breakaway-left")  ;;rest of the breakaway stuff put in training-part but doesn't seem to work
+  ;;("breakaway-mid-ag.go" "breakaway-mid")
+  ;;("breakaway-right-ag.go" "breakaway-right")
   )

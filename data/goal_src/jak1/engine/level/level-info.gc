@@ -2044,7 +2044,7 @@
                                              :lev0 'crystal-cave
                                              :disp0 'display
                                              :lev1 'robocave
-                                             :disp1 'display
+                                             :disp1 '#f
                                              )
                                              (new 'static 'continue-point
                                              :name "crystal-cave-warp"
@@ -2059,7 +2059,7 @@
                                              :lev0 'crystal-cave
                                              :disp0 'display
                                              :lev1 'robocave
-                                             :disp1 'display
+                                             :disp1 '#f
                                              )
                                              (new 'static 'continue-point
                                              :name "crystal-cave-void-entry"
@@ -2073,7 +2073,7 @@
                                              :lev0 'crystal-cave
                                              :disp0 'display
                                              :lev1 'robocave
-                                             :disp1 'display
+                                             :disp1 '#f
                                              )
                                              (new 'static 'continue-point
                                              :name "crystal-cave-bad-shrooms"
@@ -2087,7 +2087,7 @@
                                              :lev0 'crystal-cave
                                              :disp0 'display
                                              :lev1 'robocave
-                                             :disp1 'display
+                                             :disp1 '#f
                                              )
                                              (new 'static 'continue-point
                                              :name "crystal-cave-void-end"
@@ -2101,7 +2101,7 @@
                                              :lev0 'crystal-cave
                                              :disp0 'display
                                              :lev1 'robocave
-                                             :disp1 'display
+                                             :disp1 '#f
                                              ))
                            :tasks '()
                            :priority 100

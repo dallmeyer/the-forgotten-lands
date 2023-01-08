@@ -1055,7 +1055,17 @@
   "Is arg0 visible? Note that this will return #f if the visibility data is not loaded."
 
   ;; note : pc port added option to show every actor regardless
-  (with-pc (if (-> *pc-settings* force-actors?) (return #t)))
+  ;; EDITED TO ALWAYS RETURN #t FOR NOW CHANGE LATER 
+  (with-pc 
+    (cond 
+      ((-> *pc-settings* force-actors?) 
+        (return #t)
+        )
+      (else
+        (return #t)
+        )
+      )
+    )
 
   ;; check the vis bits!
   (let* (;; lwu v1, 388(a0)

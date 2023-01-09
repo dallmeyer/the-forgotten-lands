@@ -1,6 +1,7 @@
 # The Forgotten Lands
 
 # USE THE MOD LAUNCHER TO HAVE AUTO UPDATES
+Link : [opengoal-mod-launcher](https://opengoal-unofficial-mods.github.io/download.html).
 
 One level is playable so far :
 

@@ -79,24 +79,24 @@
     {
       "trans": [-347.17, 87.62, -95.83], // translation
       "etype": "fuel-cell",  // actor type
-      "game_task": 119, // associated game task (for powercells, etc)
+      "game_task": 120, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [-347.17, 87.62, -95.83, 10], // bounding sphere
       "lump": {
         "name":"crystalc-fuel-cell-03",
-        "eco-info": ["int32", 6, 119],
+        "eco-info": ["int32", 6, 120],
         "light-index": ["int32", 2]
       }
     },
     {
       "trans": [-157.11, 118.84, -131.35], // translation
       "etype": "fuel-cell",  // actor type
-      "game_task": 120, // associated game task (for powercells, etc)
+      "game_task": 119, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [-159.67, 118.03, -132.89, 10], // bounding sphere
       "lump": {
         "name":"crystalc-fuel-cell-04",
-        "eco-info": ["int32", 6, 120],
+        "eco-info": ["int32", 6, 119],
         "light-index": ["int32", 4]
       }
     },

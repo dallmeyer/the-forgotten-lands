@@ -2021,6 +2021,8 @@
                            :index 27
                            :name 'crystal-cave
                            :customname "???"
+                           :custom-orb-count 150
+                           :custom-buzzer-count 7
                            :visname 'crystal-cave-vis ;; name + -vis
                            :nickname 'crc          ;; nickname
                            :packages '(maincave)

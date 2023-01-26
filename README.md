@@ -19,17 +19,17 @@ This is the first level being added, here's the list of current features and inc
  - Warp to level
  - Working menu and tasks
  - Working checkpoints and load boundaries
+ - Jak's mood set per positions
 
 **Incoming features:**
-- Platform paths 
-- Water (Visual and functional)
-- Common actors textures
-- Enemies
+- [Tools required] Platform paths 
+- [Tools required] Water (Visual and functional)
+- [Tools required] Common actors textures
+- [Tools required] Enemies
 - Custom Actors
-- Level name pop-up
-- Alpha textures
-- Metallic textures
-- Jak's mood set per positions
+- [Tools required] Level name pop-up
+- [Tools required] Alpha textures
+- [Tools required] Metallic textures
 - Working sky
 - Custom music
 - Ambient sounds

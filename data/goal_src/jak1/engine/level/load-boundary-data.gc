@@ -1141,16 +1141,15 @@
 
 ;; TEMPORARY WAY BACK TO GEYSER
 
-(static-load-boundary :flags (player )
+(static-load-boundary :flags (closed player) ;; close flag makes it a horizontal load-boundary
   ;;     y top                y bottom
-  :top (meters 122.01)  :bot (meters 61.45)
-  ;;          point 0 x        point 0 z      point 1 x        point 1 z
-  :points (  (meters -279.95) (meters 74.91)  (meters -331.02) (meters 73.97) )
+  :top (meters 84.06)  :bot -568353.0000
+  ;;          point 0 x        point 0 z      point 1 x        point 1 z        point 2 x        point 2 z      point 3 x        point 3 z      
+  :points (  (meters -278.46) (meters 119.6)  (meters -329.53) (meters 118.65)  (meters -328.41) (meters 58.11)  (meters -277.34) (meters 59.05))
   :fwd (checkpt "training-start" #f)
   :bwd (checkpt "training-start" #f)
   )
-
-
+  
 ))
 
 (doarray (i *static-load-boundary-list*)

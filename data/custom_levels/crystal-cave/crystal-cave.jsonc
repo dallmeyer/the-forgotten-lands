@@ -60,9 +60,10 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [-158.77, 106.57, -45.16, 10], // bounding sphere
       "lump": {
-        "name":"crystalc-fuel-cell-01",
+        "name":"crystalc-fuel-cell-01", // middle cell
         "eco-info": ["int32", 6, 117],
-        "light-index": ["int32", 1]
+        "light-index": ["int32", 1],
+        "movie-pos":["vector4m", [-158.77, 104.57, -45.16, 15.0]]
       }
     },
     {
@@ -72,7 +73,7 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [-59.13, 67.35, -115.35, 10], // bounding sphere
       "lump": {
-        "name":"crystalc-fuel-cell-02",
+        "name":"crystalc-fuel-cell-02", // river cell
         "eco-info": ["int32", 6, 118]
       }
     },
@@ -83,9 +84,10 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [-347.17, 87.62, -95.83, 10], // bounding sphere
       "lump": {
-        "name":"crystalc-fuel-cell-03",
+        "name":"crystalc-fuel-cell-03", // mushroom cell
         "eco-info": ["int32", 6, 120],
-        "light-index": ["int32", 2]
+        "light-index": ["int32", 2],
+        "movie-pos":["vector4m", [-347.17, 85.12, -95.83, 121.2]]
       }
     },
     {
@@ -95,9 +97,10 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [-159.67, 118.03, -132.89, 10], // bounding sphere
       "lump": {
-        "name":"crystalc-fuel-cell-04",
+        "name":"crystalc-fuel-cell-04", // ship cell
         "eco-info": ["int32", 6, 119],
-        "light-index": ["int32", 4]
+        "light-index": ["int32", 4],
+        "movie-pos":["vector4m", [-157.11, 116.34, -131.35, 120.0]]
       }
     },
     // ###########################################################################
@@ -1956,7 +1959,7 @@
         "name":"crystalc-bad-shroom-big-02",
         "effect-name":"waterfall",
         "art-name":"group-crystalc-bad-shroom-big",
-        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],
         "cycle-speed": ["float", -1.0, 0.0]
       }
     },

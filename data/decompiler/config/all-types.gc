@@ -601,6 +601,7 @@
   (list-sounds)
   (unload-music)
   (set-fps)
+  (set-mirror 201) ;; added
   )
 
 ;; flavors for music
@@ -1610,6 +1611,34 @@
   (hint-511                     #x14ff)
   (speedrunner-mode             #x1500)
   (cutscene-skips               #x1501)
+  (checkpoint-select            #x1502)
+  (speedrun-options-warning     #x1503)
+  (speedrun-reset-current-run   #x1504)
+  (speedrun-new-full-game       #x1505)
+  ;; (speedrun-full-game-any       #x1506)
+  ;; (speedrun-full-game-100       #x1507)
+  ;; (speedrun-full-game-nolts     #x1508)
+  ;; (speedrun-full-game-nofcs     #x1509)
+  ;; (speedrun-full-game-orbless   #x150a)
+  ;; (speedrun-full-game-all-flies #x150b)
+  ;; (speedrun-full-game-all-orbs  #x150c)
+  (speedrun-new-individual-level #x150d)
+  (speedrun-il-training          #x150e)
+  (speedrun-il-village1          #x150f)
+  (speedrun-il-beach             #x1510)
+  (speedrun-il-jungle            #x1511)
+  (speedrun-il-misty             #x1512)
+  (speedrun-il-firecanyon        #x1513)
+  (speedrun-il-village2          #x1514)
+  (speedrun-il-sunken            #x1515)
+  (speedrun-il-swamp             #x1516)
+  (speedrun-il-rolling           #x1517)
+  (speedrun-il-ogre              #x1518)
+  (speedrun-il-village3          #x1519)
+  (speedrun-il-snow              #x151a)
+  (speedrun-il-cave              #x151b)
+  (speedrun-il-lavatube          #x151c)
+  (speedrun-il-citadel           #x151d)
 ;; GAME-TEXT-ID ENUM ENDS
   )
 
@@ -3429,6 +3458,17 @@
   :flag-assert         #x900000004
   )
 
+; added
+(defenum sound-mirror-mode
+  :type uint8
+  (normal)
+  (mirrored)
+  )
+
+; added for mirror mode
+(deftype sound-rpc-set-mirror-mode (sound-rpc-cmd)
+  ((mirror sound-mirror-mode)))
+
 (deftype sound-rpc-union (structure)
   ((data              uint32                     20 :offset-assert 0)
    (load-bank         sound-rpc-load-bank            :offset 0)
@@ -3454,6 +3494,7 @@
    (shutdown          sound-rpc-shutdown             :offset 0)
    (list-sounds       sound-rpc-list-sounds          :offset 0)
    (unload-music      sound-rpc-unload-music         :offset 0)
+   (mirror-mode       sound-rpc-set-mirror-mode      :offset 0) ;; added
    )
   :method-count-assert 9
   :size-assert         #x50
@@ -4099,8 +4140,8 @@
 (deftype dma-gif-packet (structure)
   ((dma-vif dma-packet :inline :offset-assert 0)
    (gif     uint64    2       :offset-assert 16) ;; guess
-   (gif0    uint64 :offset 16)
-   (gif1    uint64 :offset 24)
+   (gif0    uint64 :offset 16 :score 1)
+   (gif1    uint64 :offset 24 :score 1)
    (quad    uint128    2       :offset 0)
    )
   :method-count-assert 9
@@ -15750,6 +15791,9 @@
   (memcard-disable-auto-save)
   (memcard-auto-save-disabled)
   (monitor)
+  (checkpoint-select)
+  (speedrun-options)
+  (speedrun-il-options)
 
   ;; the last one!
   (max)

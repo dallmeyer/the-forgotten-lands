@@ -341,6 +341,17 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   (draw-xyz jak 0.0 3.0 3.0)
 )
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Checking water planes
+;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-
-
+(defun print-water-vol-planes ((water water-vol))
+  (format #t "water-vol:~%")
+  (dotimes (i (-> water vol pos-vol 0 num-planes))
+   (let ((plane (-> water vol pos-vol 0 plane i)))
+    (format #t "plane ~D:~%x: ~m ~%y: ~m~%z: ~m~%w: ~m~%" i 
+      (-> plane x) (-> plane y) (-> plane z) (-> plane w)
+      )
+      )
+    )
+  )

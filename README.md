@@ -20,10 +20,11 @@ This is the first level being added, here's the list of current features and inc
  - Working menu and tasks
  - Working checkpoints and load boundaries
  - Jak's mood set per positions
+ - Water volumes (functional)
 
 **Incoming features:**
 - [Tools required] Platform paths 
-- [Tools required] Water (Visual and functional)
+- [Tools required] Water (Visual)
 - [Tools required] Common actors textures
 - [Tools required] Enemies
 - Custom Actors

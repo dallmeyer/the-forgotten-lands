@@ -60,9 +60,10 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [-158.77, 106.57, -45.16, 10], // bounding sphere
       "lump": {
-        "name":"crystalc-fuel-cell-01",
+        "name":"crystalc-fuel-cell-01", // middle cell
         "eco-info": ["int32", 6, 117],
-        "light-index": ["int32", 1]
+        "light-index": ["int32", 1],
+        "movie-pos":["vector4m", [-158.77, 104.57, -45.16, 15.0]]
       }
     },
     {
@@ -72,7 +73,7 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [-59.13, 67.35, -115.35, 10], // bounding sphere
       "lump": {
-        "name":"crystalc-fuel-cell-02",
+        "name":"crystalc-fuel-cell-02", // river cell
         "eco-info": ["int32", 6, 118]
       }
     },
@@ -83,9 +84,10 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [-347.17, 87.62, -95.83, 10], // bounding sphere
       "lump": {
-        "name":"crystalc-fuel-cell-03",
+        "name":"crystalc-fuel-cell-03", // mushroom cell
         "eco-info": ["int32", 6, 120],
-        "light-index": ["int32", 2]
+        "light-index": ["int32", 2],
+        "movie-pos":["vector4m", [-347.17, 85.12, -95.83, 121.2]]
       }
     },
     {
@@ -95,9 +97,10 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [-159.67, 118.03, -132.89, 10], // bounding sphere
       "lump": {
-        "name":"crystalc-fuel-cell-04",
+        "name":"crystalc-fuel-cell-04", // ship cell
         "eco-info": ["int32", 6, 119],
-        "light-index": ["int32", 4]
+        "light-index": ["int32", 4],
+        "movie-pos":["vector4m", [-157.11, 116.34, -131.35, 120.0]]
       }
     },
     // ###########################################################################
@@ -1956,7 +1959,7 @@
         "name":"crystalc-bad-shroom-big-02",
         "effect-name":"waterfall",
         "art-name":"group-crystalc-bad-shroom-big",
-        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],
         "cycle-speed": ["float", -1.0, 0.0]
       }
     },
@@ -2560,7 +2563,131 @@
     // ###########################################################################
     // ###########################################################################
 
+        // look stuff:
+        // 0-12= sunken-water 
+        // 14=cave-water-2 
+        // 15=dark-eco-pool-9 
+        // 16==dark-eco-pool-6
+        // 17==dark-eco-pool-5
+        // 18=dark-eco-pool-8
+        // 19==dark-eco-pool-7
+        // 20=dark-eco-pool-10
+        // 32=dark-eco-pool-11 (misty)
+        // 33=ogre-lava-1
+        // 34=jungle-water-1 
+        // 35=villagec-water-1
+        // 36=training-water-1 
+        // 37=cave-water-3
+        // 38-39=rolling-water
+        // 41=dark-eco-pool-12 (finalboss)
+        // 42=lavatube-lava-1
+        // 47=villageb-water-1
 
+        {
+          "trans": [-96.3990, 88.0923, 4.2067], // translation
+          "etype": "water-anim",  // actor type                               // TEST ACTOR //
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion 
+          "bsphere": [-96.3990, 88.0923, 4.2067, 200.0], // bounding sphere
+          "lump": {
+            "vol": ["vector",
+                [1.0, 0.0, 0.0, -328628.224],   // +x (+x in blender)
+                [-1.0, 0.0, 0.0, 454656.0],     // -x (inverted x in blender because of the -1)
+                [0.0, 1.0, 0.0, 360448.0],      // +y (+z in blender)
+                [0.0, -1.0, 0.0, -342198.6304], // -y (inverted z in blender because of the -1)
+                [0.0, 0.0, 1.0, 65536.0],       // +z (-y in blender)
+                [0.0, 0.0, -1.0, 34816.0]       // -z (+y in blender)
+              ],
+            "name": "crystalc-water-vol-1",
+            "water-height": ["float",  364640.0, 2048.0, 8192.0, 1048588.0 ], // camera height, ?, wadledept, flags
+            "look": ["int32", 36],
+            "vis-dist":  ["meters", 200.0]
+          }
+        },
+        {
+          "trans": [-134.93, 86.85, -80.87], // translation
+          "etype": "water-anim",  // actor type                               // TEST ACTOR //
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion 
+          "bsphere": [-134.93, 86.85, -80.87, 200.0], // bounding sphere
+          "lump": {
+            "vol": ["vector",
+                [0.848, 0.0, -0.529, -146395.648],  // +x (+x in blender)
+                [-1.0, 0.0, 0.0, 602193.92], // -x (inverted x in blender because of the -1)
+                [0.0, 1.0, 0.0, 355768.72],     // +y (+z in blender)
+                [0.0, -1.0, 0.0, -340576.72], // -y (inverted z in blender because of the -1)
+                [0.13, 0.0, 0.990, -350101.99],      // +z (-y in blender)
+                [-0.381, 0.0, -0.924, 556874.64]    // -z (+y in blender)
+              ],
+            "name": "crystalc-water-vol-2",
+            "water-height": ["float",  359864.72, 2048.0, 6592.0, 1048588.0 ], // camera height, ?, wadledept, flags
+            "look": ["int32", 36],
+            "vis-dist":  ["meters", 200.0]
+          }
+        },
+        {
+          "trans": [-158.0, 86.85, -75.19], // translation
+          "etype": "water-anim",  // actor type                               // TEST ACTOR //
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion 
+          "bsphere": [-158.0, 86.85, -75.19, 200.0], // bounding sphere
+          "lump": {
+            "vol": ["vector",
+                [1.0, 0.0, 0.0, -599080.96],  // +x (+x in blender)
+                [-1.0, 0.0, 0.0, 690446.336], // -x (inverted x in blender because of the -1)
+                [0.0, 1.0, 0.0, 355768.72],     // +y (+z in blender)
+                [0.0, -1.0, 0.0, -340576.72], // -y (inverted z in blender because of the -1)
+                [0.0, 0.0, 1.0, -269877.6576],      // +z (-y in blender)
+                [-0.258, 0.0, -0.965, 500101.99]    // -z (+y in blender)
+              ],
+            "name": "crystalc-water-vol-3",
+            "water-height": ["float",  359864.72, 2048.0, 6592.0, 1048588.0 ], // camera height, ?, wadledept, flags
+            "look": ["int32", 36],
+            "vis-dist":  ["meters", 200.0]
+          }
+        },
+        {
+          "trans": [-180.43, 88.70, -73.21], // translation
+          "etype": "water-anim",  // actor type                               // TEST ACTOR //
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion 
+          "bsphere": [-180.43, 88.70, -73.21, 200.0], // bounding sphere
+          "lump": {
+            "vol": ["vector",
+                [1.0, 0.0, 0.0, -699060.224],  // +x (+x in blender)
+                [-1.0, 0.0, 0.0, 820674.56], // -x (inverted x in blender because of the -1)
+                [0.0, 1.0, 0.0, 363315.2],     // +y (+z in blender)
+                [0.0, -1.0, 0.0, -340576.72], // -y (inverted z in blender because of the -1)
+                [0.0, 0.0, 1.0, -272839.4752],      // +z (-y in blender)
+                [0.0, 0.0, -1.0, 337753.2928]    // -z (+y in blender)
+              ],
+            "name": "crystalc-water-vol-4",
+            "water-height": ["float",  359864.72, 2048.0, 8192.0, 1048588.0 ], // camera height, ?, wadledept, flags
+            "look": ["int32", 36],
+            "vis-dist":  ["meters", 200.0]
+          }
+        },
+        {
+          "trans": [-194.64, 94.74, -63.78], // translation
+          "etype": "water-anim",  // actor type                               // TEST ACTOR //
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion 
+          "bsphere": [-194.64, 94.74, -63.78, 200.0], // bounding sphere
+          "lump": {
+            "vol": ["vector",
+                [0.883, 0.0, -0.469, -533268.48],  // +x (+x in blender)
+                [-1.0, 0.0, 0.0, 835940.352], // -x (inverted x in blender because of the -1)
+                [0.0, 1.0, 0.0, 388055.04],     // +y (+z in blender)
+                [0.0, -1.0, 0.0, -360576.72], // -y (inverted z in blender because of the -1)
+                [0.762, 0.0, 0.646, -734914.688],      // +z (-y in blender) 0.762, 0.0, 0.646, -734914.688
+                [0.0, 0.0, -1.0, 304025.6]    // -z (+y in blender)
+              ],
+            "name": "crystalc-water-vol-5",
+            "water-height": ["float",  392151.04, 2048.0, 8192.0, 1048588.0 ], // camera height, ?, wadledept, flags
+            "look": ["int32", 36],
+            "vis-dist":  ["meters", 200.0]
+          }
+        },
 
     // ###########################################################################
     // ###########################################################################

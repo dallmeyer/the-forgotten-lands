@@ -2944,8 +2944,8 @@
 
 (set! (-> *crystal-cave-mood* palette-interp) *village1-palette-interp-table*)
 
-(set! (-> *crystal-cave-mood* sky-texture-interp) *default-interp-table*)
+(set! (-> *crystal-cave-mood* sky-texture-interp) *village1-palette-interp-table*)
 
-(set! (-> *crystal-cave-mood* num-stars) 85.0)
+(set! (-> *crystal-cave-mood* num-stars) 0.0)
 
 (make-crystal-cave-light-kit *crystal-cave-mood*)

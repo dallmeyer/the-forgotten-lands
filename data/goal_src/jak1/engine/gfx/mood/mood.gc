@@ -2786,6 +2786,8 @@
     (set! (-> arg0 times 0 w) 1.0)
     (update-mood-quick arg0 0 0 0 arg2)
     (update-mood-itimes arg0)
+    (update-mood-sky-texture arg0 arg1)
+    ;;(update-mood-palette arg0 arg1 arg2) ;; This update the actor lighting with time of day
     )
   ;; CUSTOM LIGHT-INDEX FOR DIFFERENT ACTOR LIGHTING (see update-mood-jungleb) :
   

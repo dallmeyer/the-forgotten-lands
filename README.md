@@ -31,7 +31,7 @@ This is the first level being added, here's the list of current features and inc
 - [Tools required] Level name pop-up
 - [Tools required] Alpha textures
 - [Tools required] Metallic textures
-- Working sky
+- [Tools required] Working sky
 - Custom music
 - Ambient sounds
 

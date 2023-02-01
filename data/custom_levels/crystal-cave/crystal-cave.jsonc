@@ -2831,6 +2831,15 @@
     */
   ],
 "ambients" : [
-
+  {
+    "trans": [-51.23, 93.12, 15.18, 20.0],
+    "bsphere": [-51.23, 93.12, 15.18, 10],
+    "lump": {
+      "name": "crystalc-amb-01-namepop",
+      "type": "'hint",
+      "text-id": ["int32", 4297],
+      "play-mode": "'notice"
+    }
+  }
   ]
 }

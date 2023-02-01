@@ -697,7 +697,7 @@
   (crystalc-ship      #x10c6)
   (crystalc-shrooms   #x10c7)
   (crystalc-buzzer    #x10c8)
-  (crystalc-level     #x10c9)
+  (crystalc-level     #xa01);; CHANGED ID TO SEE THE LEVEL ONLY ONCE IN THE POPUP (<4096) xa00 and up seems to be free
 
   (default                      #x10d0)
   (flava-vi1-unused0            #x10d1)

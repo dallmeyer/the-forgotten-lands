@@ -21,19 +21,24 @@ This is the first level being added, here's the list of current features and inc
  - Working checkpoints and load boundaries
  - Jak's mood set per positions
  - Water volumes (functional)
+ - Ambient sounds
+ - Level name pop-up
 
 **Incoming features:**
 - [Tools required] Platform paths 
 - [Tools required] Water (Visual)
 - [Tools required] Common actors textures
 - [Tools required] Enemies
-- Custom Actors
-- [Tools required] Level name pop-up
 - [Tools required] Alpha textures
 - [Tools required] Metallic textures
 - [Tools required] Working sky
-- Custom music
-- Ambient sounds
+- Custom Music
+- Music Flava
+- Custom Actors
+  - ???
+  - ???
+  - ???
+
 
 Forked from OpenGoal-Mod-Base :
 # OpenGoal-Mod-Base

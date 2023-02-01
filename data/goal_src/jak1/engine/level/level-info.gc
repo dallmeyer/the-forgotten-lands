@@ -2026,7 +2026,7 @@
                            :visname 'crystal-cave-vis ;; name + -vis
                            :nickname 'crc          ;; nickname
                            :packages '(maincave)
-                           :sound-banks '(maincave)
+                           :sound-banks '(maincave) ;; to get ambient sounds
                            :music-bank 'maincave
                            :ambient-sounds '()
                            :mood '*crystal-cave-mood*

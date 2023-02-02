@@ -2929,6 +2929,15 @@
       "effect-param": ["float", 11.0, 40.0, 50.0, 150.0],  // ??, ??, ??, Max Radius
       "cycle-speed": ["float", -1.0, 0.0]
     }
+  },
+  {
+    "trans": [-156.64, 102.49, -132.41, 30.0],
+    "bsphere": [-156.64, 102.49, -132.41, 30],
+    "lump": {
+      "name": "crystalc-amb-music-01-ship",
+      "type": "'music",
+      "flava":["int32", 28]
+    }
   }*/
   ]
 }

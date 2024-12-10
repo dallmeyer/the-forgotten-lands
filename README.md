@@ -1,79 +1,49 @@
-# The Forgotten Lands
-
-# USE THE MOD LAUNCHER TO HAVE AUTO UPDATES
-Link : [OpenGOAL Mod Launcher](https://jakmods.dev/#download).
-
-The Forgotten Lands is a new adventure with a new story and levels for you to explore. 
-
-To get to the custom levels, simply start a new game and beat Geyser Rock
-
-
-
-# The rest of this README will cover features in the mod. Stop here if you don't wish to be spoiled!
-
-
-## Crystal Cave
-This is the first level being added, here's the list of current features and incoming ones.
-
-**Current features:**
- - Level Geometry
- - Textures
- - Invisible walls and events (void/damaging/etc)
- - Geometry Lighting
- - Collectable Actors (orbs/cell/eco/etc)
- - Particles Actors
- - Actor Specific Lighting
- - Warp to level
- - Working menu and tasks
- - Working checkpoints and load boundaries
- - Jak dynamic lighting
- - Water volumes (functional)
- - Ambient sounds
- - Level name pop-up
- - Platform paths
- - Common actors textures
- - Custom Music
- - Custom Hints
- - Custom Actors
-  - Gondola
-  - Electric arc
-  - Super green crystal
-
-**Incoming features:**
-- [Tools required] Water (Visual)
-- [Tools required] Enemies
-- [Tools required] Alpha textures
-- [Tools required] Metallic textures
-- [Tools required] Working sky
-
-## Crescent Top
-Second level in the mod
-
-**Current features:**
- - Everything also in Crystal Cave
- - Custom ring challenge
- - Emerging and sinking platforms particles
- - Working Zoomers
-
-## Energy Bay
-Third level in the mod
-
-**Current features:**
- - Everything also in Crystal Cave and Crescent Top
- - Custom Actors
-  - Super red crystal
-  - Breakable boulder
-
-Forked from OpenGoal-Mod-Base :
 # OpenGoal-Mod-Base
-Serves as a base template for openGOAL mods that will be supported via [opengoal-mod-launcher](https://opengoal-unofficial-mods.github.io/download.html).
+Serves as a base template for openGOAL mods that will be supported via [OG-ModLauncher](https://github.com/OpenGOAL-Mods/OG-ModLauncher).
 
 - Please ensure you are not committing copyrighted material to your repo (the `.gitignore` should help prevent this). 
 - Generally speaking you should only be updating certain directories/files:
-  - the executable binaries (`goalc.exe`, `gk.exe`, `extractor.exe`)
-  - GOAL code (`/data/goal_src`)
-  - Assets specific to the PC Port (`/data/game/assets/jak1/`)
-  - Decompiler config (`/data/decompiler/config`)# OpenGoal-Mod-Base
+  - GOAL code (`/goal_src`)
+  - Assets specific to the PC Port (`/game/assets/jak1/`, `/custom_assets/`)
+  - The executable binaries (`/out/build/Release/goalc.exe`, `/out/build/Release/gk.exe`, `/out/build/Release/extractor.exe`)
+  - Decompiler config (`/decompiler/config`)
+
+## Custom Navmesh Implementation and Example
+
+LuminarLight made changes that allow placing custom navmesh into Jak 1 levels. This will hopefully become useless one day, if proper navmesh support is ever added to OpenGOAL.
+
+The navmesh system in Jak II is more advanced, I haven't managed to figure it out yet.
+
+### Getting Started
+
+Please keep in mind that you are expected to be familiar with custom levels and GOAL. Still, I tried to make things as understandable as possible.
+
+I would recommend copying an existing navmesh as a start. You can use the inspect method I made. The actor whose navmesh you want to copy must be loaded. Example:
+`(inspect (-> (the-as entity-actor (entity-by-name "snow-bunny-55")) nav-mesh))`
+
+You should change the origin and bounds, depending on where you want to place your navmesh.
+
+I usually just remove the nodes, because I do not understand it and things seem fine without it. But keep in mind that every navmesh that is in the game has at least one node.
+
+We do not understand route, but it is needed - otherwise game will crash. If you copy an existing navmesh, the route data is copied correctly. But since we don't understand it, for fully custom navmesh we can never have proper route data. Correct route data is essential if you want to take advantage of gap triangles (where enemies jump).
+
+You can make multiple enemies use the same navmesh. To do this, create the navmesh through code for the first actor, like in the example. And for the other actors, add a lump that tells the game to use another actor's navmesh. Reference is by aid. Example: `"nav-mesh-actor": ["uint32", 40000]`. Tip: You can do the same thing with paths, using the `path-actor` lump.
+
+If the game crashes when you approach a custom navmesh, make sure you added `:custom-hacky? #t` to your custom navmesh definition. If that is there, then check if the actor has a path. It needs a path.
+
+If something is still unclear, please look at the code. I added a lot of comments.
+
+### Final Words
+
+I am not an expert at decompiling, so my methods were not the most efficient. But with a lot of time, I managed to figure things out. There are probably people who could do this a lot better than me. Hopefully it will happen.
+
+Also, I know my inspect method is not perfect. But it is very tedious to write such a thing, so I just included what we really need. And I think the nodes part could use a cleanup.
+
+I am happy if anyone finds this useful. But I have a request: If you learn more about navmeshes, especially things that would benefit other modders as well, please let me know. And maybe we will add it to this branch.
+
+*~~Luminar Light*
+
+---
 
 <p align="center">
   <img width="500" height="100%" src="./docs/img/logo-text-colored-new.png">
@@ -133,24 +103,6 @@ Additionally, you can find further documentation and answers to **frequently ask
   - [`goal_src/`](#goal_src)
   - [`game` runtime](#game-runtime)
 
-## Please read first
-
-> [!IMPORTANT]
-> Our repositories on GitHub are primarily for development of the project and tracking active issues. Most of the information you will find here pertains to setting up the project for development purposes and is not relevant to the end-user.
-
-For questions or additional information pertaining to the project, we have a Discord for discussion here: https://discord.gg/VZbXMHXzWv
-
-Additionally, you can find further documentation and answers to **frequently asked questions** on the project's main website: https://opengoal.dev
-
-> [!WARNING]
-> **Do not use this decompilation project without providing your own legally purchased copy of the game.**
-
-### Quick Start
-
-If you just want to play the game, you can follow the steps in this video: https://www.youtube.com/watch?v=p8I9NfuZOgE
-
-We do not distribute any assets from the game - you must use your own legitimately obtained PS2 copy of the game. We support every retail PAL, NTSC, and NTSC-J build, including Greatest Hits copies. 
-
 ## Project Description
 
 This project is to port the original Jak and Daxter and Jak II to PC. Over 98% of the games are written in GOAL, a custom Lisp language developed by Naughty Dog. Our strategy is:
@@ -167,7 +119,7 @@ Our objectives are:
 
 We support both Linux and Windows on x86-64.
 
-> We do not support, or plan to support the ARM architecture.  This means that this will not run on devices such as an M1 Mac or a mobile device.
+> We do not support, or plan to support the ARM architecture.  This means that this will not run on devices such as a mobile device.
 
 ### Current Status
 
@@ -222,7 +174,7 @@ Unfortunately you'll still need task runner on your local machine to run the gam
 Install packages and init repository:
 
 ```sh
-sudo apt install gcc make cmake build-essential g++ nasm clang-format libxrandr-dev libxinerama-dev libxcursor-dev libpulse-dev libxi-dev python libgl1-mesa-dev libssl-dev
+sudo apt install gcc make cmake ninja-build build-essential g++ nasm clang-format libxrandr-dev libxinerama-dev libxcursor-dev libpulse-dev libxi-dev python libgl1-mesa-dev libssl-dev
 sudo sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -d -b /usr/local/bin
 ```
 
@@ -330,7 +282,7 @@ Then build the entire project as `Windows Release (clang)`. You can also press C
 
 ### MacOS
 
-> NOTE: At this time you can only run the game on macOS if you have an Intel processor.
+> NOTE: Running the game requires an Apple Silicon Mac running macOS Sequoia, or an Intel Mac.
 
 Ensure that you have Xcode command line tools installed (this installs things like Apple Clang).  If you don't, you can run the following command:
 
@@ -338,23 +290,25 @@ Ensure that you have Xcode command line tools installed (this installs things li
 xcode-select --install
 ```
 
-#### Intel Based
+On Apple Silicon, Rosetta 2 also must be installed:
 
 ```bash
-brew install go-task/tap/go-task
+softwareupdate --install-rosetta
+```
+
+#### Building for x86_64
+
+```bash
 brew install cmake nasm ninja go-task clang-format
-cmake -B build --preset=Release-macos-clang
+cmake -B build --preset=Release-macos-x86_64-clang
 cmake --build build --parallel $((`sysctl -n hw.logicalcpu`))
 ```
 
-#### Apple Silicon
-
-**Not Supported at This Time**
+#### Building for ARM64 (experimental, unsupported)
 
 ```bash
-brew install go-task/tap/go-task
 brew install cmake ninja go-task clang-format
-cmake -B build --preset=Release-macos-clang
+cmake -B build --preset=Release-macos-arm64-clang
 cmake --build build --parallel $((`sysctl -n hw.logicalcpu`))
 ```
 

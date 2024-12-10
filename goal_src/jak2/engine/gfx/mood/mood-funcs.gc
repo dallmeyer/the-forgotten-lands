@@ -481,7 +481,7 @@
                )
           (cond
             ((< f0-3 15.0)
-             (set! (-> gp-1 blink) (* 0.06666667 f0-3))
+             (set! (-> gp-1 blink) (/ f0-3 15))
              )
             ((< 45.0 f0-3)
              (set! (-> gp-1 blink) (* 0.06666667 (- 60.0 f0-3)))
@@ -536,7 +536,7 @@
         (set! (-> v1-12 r) 1.0)
         )
       (let ((f0-8 (- 1.0 (get-sphere-interp a0-9 a1-3 1024000.0 2048000.0))))
-        (update-mood-weather! *mood-control* (+ 0.25 (* 0.75 f0-8)) (+ 0.5 (* 0.5 f0-8)) 30.0 30.0)
+        (update-mood-weather! *mood-control* (+ 0.25 (* 0.75 f0-8)) (+ 0.5 (/ f0-8 2)) 30.0 30.0)
         )
       )
     )
@@ -995,6 +995,26 @@
     )
   )
 
+;; og:preserve-this High FPS fix
+(defun rotate-quat-y-high-fps-fix ((quat quaternion) (rate float))
+  "This function does: (quaternion-rotate-y! quat quat (* rate (seconds-per-frame)))
+   But fixes an issue where a small rate will cause no change to the quaternion."
+  (let* ((new-Q-old (new-stack-quaternion0))
+         (delta-angle (* rate (seconds-per-frame)))
+         (delta-angle-unwrapped (unwrap-angle-small-angle-fix delta-angle))
+         (delta-angle-rad (* delta-angle-unwrapped ROT_TO_RAD))
+         (sincos-out (new-stack-vector0))
+         )
+    (sincos-rad! sincos-out delta-angle-rad)
+
+    (set! (-> new-Q-old x) 0.0)
+    (set! (-> new-Q-old y) (-> sincos-out x)) ;; sin
+    (set! (-> new-Q-old z) 0.0)
+    (set! (-> new-Q-old w) (-> sincos-out y)) ;; cos
+    (quaternion-normalize! (quaternion*! quat new-Q-old quat))
+    )
+  )
+
 (defbehavior update-mood-drillmnt time-of-day-proc ((arg0 mood-context) (arg1 float) (arg2 int))
   (copy-mood-exterior-ambi arg0 #t)
   (update-drill-lights arg0)
@@ -1004,7 +1024,9 @@
     (let ((s5-1 *math-camera*))
       (set! (-> arg0 times 5 w) 1.0)
       (if (not (paused?))
-          (quaternion-rotate-y! (-> s5-1 quat-other) (-> s5-1 quat-other) (* 273.06668 (seconds-per-frame)))
+          ;; og:preserve-this High FPS fix
+          ;; (quaternion-rotate-y! (-> s5-1 quat-other) (-> s5-1 quat-other) (* 273.06668 (seconds-per-frame)))
+          (rotate-quat-y-high-fps-fix (-> s5-1 quat-other) 273.06668)
           )
       )
     )
@@ -1206,7 +1228,9 @@
     (update-mood-flames arg0 6 2 8 0.5 0.0009765625 1.5)
     (let ((gp-1 *math-camera*))
       (if (not (paused?))
-          (quaternion-rotate-y! (-> gp-1 quat-other) (-> gp-1 quat-other) (* 273.06668 (seconds-per-frame)))
+          ;; og:preserve-this High FPS fix
+          (rotate-quat-y-high-fps-fix (-> gp-1 quat-other) 273.06668)
+          ;(quaternion-rotate-y! (-> gp-1 quat-other) (-> gp-1 quat-other) (* 273.06668 (seconds-per-frame)))
           )
       )
     )
@@ -1280,7 +1304,7 @@
   (let ((v1-1 (level-get *level* 'palent)))
     (when v1-1
       (let ((v1-2 (the-as object (-> v1-1 mood-context state))))
-        (set! (-> (the-as palent-states v1-2) turret-value) (* 0.5 arg0))
+        (set! (-> (the-as palent-states v1-2) turret-value) (/ arg0 2))
         )
       )
     )
@@ -1361,9 +1385,9 @@
 
 (defun update-village1-lights ((arg0 mood-context))
   (let ((v1-0 (-> arg0 light-group)))
-    (set! (-> v1-0 0 dir0 extra x) (* 0.5 (-> v1-0 0 dir0 extra x)))
-    (set! (-> v1-0 0 dir1 extra x) (* 0.5 (-> v1-0 0 dir1 extra x)))
-    (set! (-> v1-0 0 dir2 extra x) (* 0.5 (-> v1-0 0 dir2 extra x)))
+    (set! (-> v1-0 0 dir0 extra x) (/ (-> v1-0 0 dir0 extra x) 2))
+    (set! (-> v1-0 0 dir1 extra x) (/ (-> v1-0 0 dir1 extra x) 2))
+    (set! (-> v1-0 0 dir2 extra x) (/ (-> v1-0 0 dir2 extra x) 2))
     (set! (-> v1-0 0 ambi extra x) (* 0.75 (-> v1-0 0 ambi extra x)))
     )
   )
@@ -1379,7 +1403,7 @@
         (set! (-> arg0 times 6 w) (- 1.0 f0-0))
         (set! (-> arg0 times 7 w) f0-0)
         (if (!= f0-0 0.0)
-            (set-filter-color! (- 1.0 (* 0.25 f0-0)) (- 1.0 (* 0.5 f0-0)) 1.0)
+            (set-filter-color! (- 1.0 (/ f0-0 4)) (- 1.0 (/ f0-0 2)) 1.0)
             )
         )
       (when (not (paused?))

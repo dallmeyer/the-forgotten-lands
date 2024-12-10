@@ -211,14 +211,15 @@
 
 ;; definition for method 10 of type nav-graph-editor
 (defmethod deactivate ((this nav-graph-editor))
+  "Make a process dead, clean it up, remove it from the active pool, and return to dead pool."
   (set! *nav-graph-editor* (the-as (pointer nav-graph-editor) #f))
   ((method-of-type process deactivate) this)
   (none)
   )
 
 ;; definition for method 7 of type nav-graph-editor
-(defmethod relocate ((this nav-graph-editor) (arg0 int))
-  (call-parent-method this arg0)
+(defmethod relocate ((this nav-graph-editor) (offset int))
+  (call-parent-method this offset)
   )
 
 ;; definition for method 60 of type nav-graph-editor
@@ -1895,7 +1896,7 @@
         (let ((gp-0 (-> self nav-graph edge-array data (-> self selected-index))))
           (format *stdcon* "Density = ~F~%" (-> gp-0 density))
           (logior! (-> gp-0 mysql-save-flag) (mysql-save-flag update))
-          (+! (-> gp-0 density) (* 0.01 (-> *mouse* speedx)))
+          (+! (-> gp-0 density) (/ (-> *mouse* speedx) 100))
           (if (< (-> gp-0 density) 0.0)
               (set! (-> gp-0 density) 0.0)
               )

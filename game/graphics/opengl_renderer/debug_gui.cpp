@@ -1,14 +1,14 @@
-
 #include "debug_gui.h"
 
-#include <algorithm>
-
 #include "common/global_profiler/GlobalProfiler.h"
+#include "common/util/string_util.h"
 
+#include "game/graphics/display.h"
 #include "game/graphics/gfx.h"
+#include "game/graphics/screenshot.h"
 #include "game/system/hid/sdl_util.h"
 
-#include "third-party/fmt/core.h"
+#include "fmt/core.h"
 #include "third-party/imgui/imgui.h"
 #include "third-party/imgui/imgui_style.h"
 
@@ -113,11 +113,12 @@ void OpenGlDebugGui::draw(const DmaStats& dma_stats) {
     if (ImGui::BeginMenu("Tools")) {
       if (ImGui::BeginMenu("Screenshot")) {
         ImGui::MenuItem("Screenshot Next Frame!", nullptr, &m_want_screenshot);
-        ImGui::InputText("File", m_screenshot_save_name, 50);
-        ImGui::InputInt("Width", &screenshot_width);
-        ImGui::InputInt("Height", &screenshot_height);
-        ImGui::InputInt("MSAA", &screenshot_samples);
-        ImGui::Checkbox("Screenshot on F2", &screenshot_hotkey_enabled);
+        ImGui::InputText("File", g_screen_shot_settings->name,
+                         sizeof(g_screen_shot_settings->name));
+        ImGui::InputInt("Width", &g_screen_shot_settings->width);
+        ImGui::InputInt("Height", &g_screen_shot_settings->height);
+        ImGui::InputInt("MSAA", &g_screen_shot_settings->msaa);
+        ImGui::Checkbox("Quick-Screenshot on F2", &screenshot_hotkey_enabled);
         ImGui::EndMenu();
       }
       ImGui::MenuItem("Subtitle Editor", nullptr, &m_subtitle_editor);
@@ -151,27 +152,63 @@ void OpenGlDebugGui::draw(const DmaStats& dma_stats) {
         ImGui::TreePop();
       }
       ImGui::Checkbox("Treat Pad0 as Pad1", &Gfx::g_debug_settings.treat_pad0_as_pad1);
+      auto is_keyboard_enabled =
+          Display::GetMainDisplay()->get_input_manager()->is_keyboard_enabled();
+      if (ImGui::Checkbox("Enable Keyboard (forced on if no controllers detected)",
+                          &is_keyboard_enabled)) {
+        Display::GetMainDisplay()->get_input_manager()->enable_keyboard(is_keyboard_enabled);
+      }
       ImGui::EndMenu();
     }
 
     if (ImGui::BeginMenu("Event Profiler")) {
-      if (ImGui::Checkbox("Record", &record_events)) {
+      if (ImGui::Checkbox("Record Events", &record_events)) {
         prof().set_enable(record_events);
       }
-      ImGui::MenuItem("Dump to file", nullptr, &dump_events);
+      ImGui::SameLine();
+      ImGui::Text("%s",
+                  fmt::format("({}/{})", prof().get_next_idx(), prof().get_max_events()).c_str());
+      ImGui::InputInt("Event Buffer Size", &max_event_buffer_size);
+      if (ImGui::Button("Resize")) {
+        prof().update_event_buffer_size(max_event_buffer_size);
+      }
+      if (ImGui::Button("Reset Events")) {
+        prof().clear();
+      }
+      ImGui::Separator();
+      ImGui::Checkbox("Enable Compression", &prof().m_enable_compression);
+      if (ImGui::Button("Dump to File")) {
+        record_events = false;
+        prof().dump_to_json();
+      }
+      // if (ImGui::Button("Open dump folder")) {
+      //  // TODO - https://github.com/mlabbe/nativefiledialog
+      // }
       ImGui::EndMenu();
     }
 
     if (!Gfx::g_debug_settings.ignore_hide_imgui) {
-      ImGui::Text("%s", fmt::format("Toggle toolbar with {}",
-                                    sdl_util::get_keyboard_button_name(
-                                        Gfx::g_debug_settings.hide_imgui_key, InputModifiers()))
-                            .c_str());
+      std::string button_text =
+          fmt::format("Click here or Press {} to hide Toolbar",
+                      sdl_util::get_keyboard_button_name(Gfx::g_debug_settings.hide_imgui_key,
+                                                         InputModifiers()));
+
+      ImVec2 text_size = ImGui::CalcTextSize(button_text.c_str());
+      float button_width = text_size.x + ImGui::GetStyle().FramePadding.x * 2;
+      float button_height = text_size.y + ImGui::GetStyle().FramePadding.y * 2;
+
+      ImGui::PushStyleColor(ImGuiCol_Header, ImGui::GetStyleColorVec4(ImGuiCol_MenuBarBg));
+      ImGui::PushStyleColor(ImGuiCol_HeaderHovered,
+                            ImGui::GetStyleColorVec4(ImGuiCol_HeaderHovered));
+      ImGui::PushStyleColor(ImGuiCol_HeaderActive, ImGui::GetStyleColorVec4(ImGuiCol_HeaderActive));
+
+      if (ImGui::Selectable(button_text.c_str(), false, ImGuiSelectableFlags_DontClosePopups,
+                            ImVec2(button_width, button_height))) {
+        std::shared_ptr<GfxDisplay> display = Display::GetMainDisplay();
+        display->set_imgui_visible(false);
+      }
+      ImGui::PopStyleColor(3);
     }
-    ImGui::Text("%s", fmt::format("Press {} to toggle this toolbar",
-                                  sdl_util::get_keyboard_button_name(
-                                      Gfx::g_debug_settings.hide_imgui_key, InputModifiers()))
-                          .c_str());
   }
   ImGui::EndMainMenuBar();
 

@@ -30,6 +30,7 @@
   "dma-buffer.o"
   "dma-bucket.o"
   "dma-disasm.o"
+  "pc-cheats.o" ;; added
   "pckernel-h.o" ;; added
   "pckernel-impl.o" ;; added
   "pc-debug-common.o" ;; added
@@ -202,7 +203,7 @@
   "speedruns.o" ;; added
   "pckernel-common.o" ;; added
   "pckernel.o" ;; added
-  "input-display.o" ;;added
+  "input-display.o" ;; mod-base-change added
   "mood-tables.o"
   "mood.o"
   "weather-part.o"
@@ -246,8 +247,6 @@
   "target-util.o"
   "target-part.o"
   "collide-reaction-target.o"
-  ;; TFL note: added
-  "tfl-music-player.o"
   "logic-target.o"
   "sidekick.o"
   "voicebox.o"
@@ -347,14 +346,15 @@
   "plat-eco.o"
   "ropebridge.o"
   "ticky.o"
-  "mod-settings.o" ;; added
+  "hud-classes-pc.o" ;; added
+  "mod-settings.o" ;; added mod-base-change
   "mod-common-functions.o" ;; added
+  "orb-placer.o" ;; added
   "mod-custom-code.o" ;; added
+  "mod-debug.o" ;; added
   ;; keep zoomer stuff loaded
   "target-racer-h.o"
   "racer-part.o"
-  ;; TFL note: moved
-  "hud-classes-pc.o" ;; added
   "racer.o"
   "target-racer.o"
   "racer-states.o"
@@ -368,8 +368,7 @@
   "target-flut.o"
   "flut-saddle-ag.go"
   "eichar-flut+0-ag.go"
-  ;; TFL note: added
-  "super-eco-crystal.o"
-  "tfl-hint-data.o"
-  "tfl-hint.o"
+  ;; keep blocking-plane stuff loaded
+  "blocking-plane.o"
+  "ef-plane-ag.go"
  ))

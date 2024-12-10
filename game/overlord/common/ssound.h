@@ -41,6 +41,8 @@ struct Sound {
   s32 auto_time;
   SoundParams params;
   SoundRecord* bank_entry;
+
+  s64 add_index = 0;
 };
 
 struct Curve {
@@ -52,7 +54,7 @@ struct Curve {
 
 extern Sound gSounds[64];
 extern Vec3w gEarTrans[2];
-extern Curve gCurve[16];
+extern Curve gCurves[16];
 extern Vec3w gCamTrans;
 extern u8 gMirrorMode;
 extern s32 gCamAngle;
@@ -61,14 +63,13 @@ extern u32 sLastTick;
 void ssound_init_globals();
 
 Sound* LookupSound(s32 id);
-Sound* AllocateSound();
+Sound* AllocateSound(bool remove_old_sounds);
 s32 GetVolume(Sound* sound);
 void UpdateVolume(Sound* sound);
-s32 CalculateFallofVolume(Vec3w* pos, s32 volume, s32 fo_curve, s32 fo_min, s32 fo_max);
+s32 CalculateFalloffVolume(Vec3w* pos, s32 volume, s32 fo_curve, s32 fo_min, s32 fo_max);
 s32 GetPan(Sound* sound);
 s32 CalculateAngle(Vec3w* trans);
 void KillSoundsInGroup(u8 group);
-void UpdateLocation(Sound* sound);
 void UpdateAutoVol(Sound* sound, s32 ticks);
 void PrintActiveSounds();
 void SetCurve(s32 curve, s32 fallof, s32 ease);

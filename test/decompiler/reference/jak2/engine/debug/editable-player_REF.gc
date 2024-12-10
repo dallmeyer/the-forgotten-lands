@@ -644,7 +644,7 @@
                              )
                             (else
                               (vector-! s5-1 (edit-get-trans s1-2) s4-1)
-                              (let ((f0-9 (* 0.00390625 f30-1 (vector-length s5-1))))
+                              (let ((f0-9 (* (/ f30-1 256) (vector-length s5-1))))
                                 (set! f0-6 (fmax -40960.0 (fmin 40960.0 f0-9)))
                                 )
                               (set! (-> arg0 move-speed) f0-6)
@@ -694,7 +694,7 @@
                               )
                              (else
                                (vector-! s5-2 (edit-get-trans s1-3) s4-2)
-                               (let ((f0-21 (* 0.00390625 f30-2 (vector-length s5-2))))
+                               (let ((f0-21 (* (/ f30-2 256) (vector-length s5-2))))
                                  (set! f0-18 (fmax -40960.0 (fmin 40960.0 f0-21)))
                                  )
                                (set! (-> arg0 move-speed) f0-18)
@@ -744,7 +744,7 @@
                               )
                              (else
                                (vector-! s5-3 (edit-get-trans s1-4) s4-3)
-                               (let ((f0-32 (* 0.00390625 f30-3 (vector-length s5-3))))
+                               (let ((f0-32 (* (/ f30-3 256) (vector-length s5-3))))
                                  (set! (-> arg0 move-speed) f0-32)
                                  (set! f0-29 (fmax -40960.0 (fmin 40960.0 f0-32)))
                                  )
@@ -1425,6 +1425,7 @@
 
 ;; definition for method 10 of type editable-player
 (defmethod deactivate ((this editable-player))
+  "Make a process dead, clean it up, remove it from the active pool, and return to dead pool."
   (dotimes (v1-0 (-> *level* length))
     (let ((a1-3 (-> *level* level v1-0)))
       (if (= (-> a1-3 status) 'active)
@@ -1440,23 +1441,23 @@
 
 ;; definition for method 7 of type editable-player
 ;; WARN: Return type mismatch process-drawable vs editable-player.
-(defmethod relocate ((this editable-player) (arg0 int))
+(defmethod relocate ((this editable-player) (offset int))
   (let ((v1-0 *kernel-context*))
     (set! (-> v1-0 relocating-process) this)
     (set! (-> v1-0 relocating-min) (the-as int (&-> this type)))
     (set! (-> v1-0 relocating-max)
           (the-as int (+ (+ (-> this allocated-length) -4 (-> process size)) (the-as int this)))
           )
-    (set! (-> v1-0 relocating-offset) arg0)
+    (set! (-> v1-0 relocating-offset) offset)
     )
   (let ((v1-2 (-> this current)))
     (if (and (>= (the-as int v1-2) (-> *kernel-context* relocating-min))
              (< (the-as int v1-2) (-> *kernel-context* relocating-max))
              )
-        (&+! (-> this current) arg0)
+        (&+! (-> this current) offset)
         )
     )
-  (the-as editable-player ((method-of-type process-drawable relocate) this arg0))
+  (the-as editable-player ((method-of-type process-drawable relocate) this offset))
   )
 
 ;; definition for method 21 of type editable-player

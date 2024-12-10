@@ -11,10 +11,10 @@
 
 #|
  This file contains function defenitions that are pre placed in the mod base,
-    so if you place custom code inside of these functions, it will exectue based on
-    the name of the function, for example, if you place (set! (-> *game-info* fuel) (+ (-> *game-info* fuel) 1))
-    to the function named runs-on-orb-pickup, then jaks powercell count will increase each time you collect
-    an orb
+so if you place custom code inside of these functions, it will exectue based on
+the name of the function, for example, if you place (set! (-> *game-info* fuel) (+ (-> *game-info* fuel) 1))
+to the function named runs-on-orb-pickup, then jaks powercell count will increase each time you collect
+an orb
 |#
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -93,6 +93,21 @@
      ;; Code here runs after jak dies (and any death cutscene finishes), during the blackout before he spawns
      ))
   (none))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; TFL note: Checking water planes
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defun print-water-vol-planes ((water water-vol))
+  (format #t "water-vol:~%")
+  (dotimes (i (-> water vol pos-vol 0 num-planes))
+   (let ((plane (-> water vol pos-vol 0 plane i)))
+    (format #t "plane ~D:~%x: ~m ~%y: ~m~%z: ~m~%w: ~m~%" i 
+      (-> plane x) (-> plane y) (-> plane z) (-> plane w)
+      )
+      )
+    )
+  )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; deprecated function defintions.
